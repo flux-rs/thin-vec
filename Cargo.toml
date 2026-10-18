@@ -22,9 +22,19 @@ gecko-ffi = []
 [dependencies]
 serde = { version = "1.0", optional = true }
 malloc_size_of = { version = "0.1", default-features = false, optional = true }
+# CENTRIFUGE: flux specs
+flux-rs = { git = "https://github.com/flux-rs/flux" }
+flux-core = { git = "https://github.com/flux-rs/flux" }
+flux-alloc = { git = "https://github.com/flux-rs/flux" }
 
 [dev-dependencies]
 serde_test = "1.0"
 
 [lints.rust]
-unexpected_cfgs = { level = "warn", check-cfg = ['cfg(no_global_oom_handling)'] }
+# CENTRIFUGE: `flux` is set by `cargo flux`
+unexpected_cfgs = { level = "warn", check-cfg = ['cfg(no_global_oom_handling)', 'cfg(flux)'] }
+
+# CENTRIFUGE
+[package.metadata.flux]
+enabled = true
+cache = true

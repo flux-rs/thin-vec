@@ -145,8 +145,17 @@
 #![cfg_attr(feature = "unstable", feature(trusted_len))]
 #![cfg_attr(feature = "unstable", feature(dropck_eyepatch))]
 #![allow(clippy::comparison_chain, clippy::missing_safety_doc)]
+// CENTRIFUGE: flux injects `#![feature(custom_inner_attributes)]`.
+#![cfg_attr(flux, allow(unused_features))]
 
 extern crate alloc;
+
+// CENTRIFUGE: required for flux's `extern_spec`s on core::ptr / core::slice /
+// alloc to register. Without these the specs are silently inert.
+#[allow(unused_extern_crates)]
+extern crate flux_core;
+#[allow(unused_extern_crates)]
+extern crate flux_alloc;
 
 use alloc::alloc::*;
 use alloc::{boxed::Box, vec::Vec};
