@@ -187,17 +187,20 @@ mod impl_details {
     pub const MAX_CAP: usize = usize::MAX - 1;
 
     #[inline(always)]
+    #[flux_rs::spec(fn(usize[@x]) -> SizeType[x])]
     pub fn assert_size(x: usize) -> SizeType {
         x
     }
 
     #[inline(always)]
+    #[flux_rs::spec(fn(SizeType[@cap], bool) -> SizeType[cap])]
     pub fn pack_capacity_and_auto(cap: SizeType, auto: bool) -> SizeType {
         debug_assert!(!auto);
         cap
     }
 
     #[inline(always)]
+    #[flux_rs::spec(fn(SizeType[@cap]) -> usize[cap])]
     pub fn unpack_capacity(cap: SizeType) -> usize {
         cap
     }
@@ -330,27 +333,36 @@ impl<T, E> UnwrapCapOverflow<T> for Result<T, E> {
 // zombie-mode, but not in "real" geck-ffi mode. Minor.
 #[cfg_attr(all(feature = "gecko-ffi", any(test, miri)), repr(align(8)))]
 #[repr(C)]
+// CENTRIFUGE: a header never claims more elements than it has room for.
+#[flux_rs::refined_by(len: int, cap: int)]
+#[flux_rs::invariant(len <= cap)]
 struct Header {
+    #[field(impl_details::SizeType[len])]
     _len: SizeType,
+    #[field(impl_details::SizeType[cap])]
     _cap: SizeType,
 }
 
 impl Header {
     #[inline]
     #[allow(clippy::unnecessary_cast)]
+    #[flux_rs::spec(fn(&Header[@h]) -> usize[h.len])]
     fn len(&self) -> usize {
         self._len as usize
     }
 
     #[inline]
+    #[flux_rs::spec(fn(self: &strg Header[@h], len: usize{len <= h.cap}) ensures self: Header[len, h.cap])]
     fn set_len(&mut self, len: usize) {
         self._len = assert_size(len);
     }
 
+    #[flux_rs::spec(fn(&Header[@h]) -> usize[h.cap])]
     fn cap(&self) -> usize {
         unpack_capacity(self._cap)
     }
 
+    #[flux_rs::spec(fn(self: &strg Header[@h], cap: usize{h.len <= cap}, bool) ensures self: Header[h.len, cap])]
     fn set_cap_and_auto(&mut self, cap: usize, is_auto: bool) {
         // debug check that our packing is working
         debug_assert_eq!(
@@ -1785,6 +1797,7 @@ impl<T> ThinVec<T> {
         }
 
         // Backport of https://github.com/rust-lang/rust/blob/ee361e8fca1c30e13e7a31cc82b64c045339d3a8/library/core/src/slice/index.rs#L855
+        #[flux_rs::spec(fn(R, ops::RangeTo<usize>[@len]) -> ops::Range<usize>{r: r.start <= r.end && r.end <= len})]
         pub fn slice_range<R>(range: R, bounds: ops::RangeTo<usize>) -> ops::Range<usize>
         where
             R: ops::RangeBounds<usize>,
@@ -3146,15 +3159,24 @@ impl<T> Drain<'_, T> {
 
 /// An iterator for [`ThinVec`] which uses a closure to determine if an element should be removed.
 #[must_use = "iterators are lazy and do nothing unless consumed"]
+// CENTRIFUGE: the cursor invariant. `next` (trusted, flux ICE) only moves `idx`
+// up to `end` and bumps `del` together with `idx`; `drop` relies on it for
+// `old_len - del` and `old_len - idx`.
+#[flux_rs::refined_by(idx: int, end: int, del: int, old_len: int)]
+#[flux_rs::invariant(del <= idx && idx <= end && end <= old_len)]
 pub struct ExtractIf<'a, T, F> {
     vec: &'a mut ThinVec<T>,
     /// The index of the item that will be inspected by the next call to `next`.
+    #[field(usize[idx])]
     idx: usize,
     /// Elements at and beyond this point will be retained. Must be equal or smaller than `old_len`.
+    #[field(usize[end])]
     end: usize,
     /// The number of items that have been drained (removed) thus far.
+    #[field(usize[del])]
     del: usize,
     /// The original length of `vec` prior to draining.
+    #[field(usize[old_len])]
     old_len: usize,
     /// The filter test predicate.
     pred: F,
