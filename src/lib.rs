@@ -2536,6 +2536,7 @@ impl From<&str> for ThinVec<u8> {
     }
 }
 
+#[flux_rs::trusted_impl(reason = "ICE")]
 impl<T, const N: usize> TryFrom<ThinVec<T>> for [T; N] {
     type Error = ThinVec<T>;
 
@@ -2574,6 +2575,7 @@ impl<T, const N: usize> TryFrom<ThinVec<T>> for [T; N] {
     /// assert_eq!(a, b' ');
     /// assert_eq!(b, b'd');
     /// ```
+    #[flux_rs::trusted(reason = "panicked at crates/flux-middle/src/builtin_assoc_refts.rs:135:76")]
     fn try_from(mut vec: ThinVec<T>) -> Result<[T; N], ThinVec<T>> {
         if vec.len() != N {
             return Err(vec);
