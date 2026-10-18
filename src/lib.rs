@@ -156,6 +156,8 @@ extern crate alloc;
 extern crate flux_core;
 #[allow(unused_extern_crates)]
 extern crate flux_alloc;
+#[cfg(flux)]
+mod flux_specs;
 
 use alloc::alloc::*;
 use alloc::{boxed::Box, vec::Vec};
@@ -983,14 +985,18 @@ impl<T> ThinVec<T> {
     /// assert_eq!(vec, [1, 2]);
     /// ```
     pub fn pop(&mut self) -> Option<T> {
-        let old_len = self.len();
+        // CENTRIFUGE: pointer and length come from one `as_mut_slice()` (was
+        // `self.len()` + `self.data_raw()`), so flux can bound the offsets.
+        let v = self.as_mut_slice();
+        let old_len = v.len();
+        let ptr = v.as_mut_ptr();
         if old_len == 0 {
             return None;
         }
 
         unsafe {
             self.set_len_non_singleton(old_len - 1);
-            Some(ptr::read(self.data_raw().add(old_len - 1)))
+            Some(ptr::read(ptr.add(old_len - 1)))
         }
     }
 
@@ -1050,15 +1056,20 @@ impl<T> ThinVec<T> {
     /// assert_eq!(v.remove(1), 2);
     /// assert_eq!(v, [1, 3]);
     /// ```
+    // CENTRIFUGE: `T::size_of() >= 0` always holds; flux lacks the axiom for a
+    // generic `T` (log/FLUX_ISSUES.md #1), and the slice-pointer offsets need it.
+    #[flux_rs::spec(fn(self: &mut ThinVec<T>, idx: usize) -> T requires T::size_of() >= 0)]
     pub fn remove(&mut self, idx: usize) -> T {
-        let old_len = self.len();
+        // CENTRIFUGE: pointer and length from one `as_mut_slice()`, as in `pop`.
+        let v = self.as_mut_slice();
+        let old_len = v.len();
+        let ptr = v.as_mut_ptr();
 
         assert!(idx < old_len, "Index out of bounds");
 
         unsafe {
             self.set_len_non_singleton(old_len - 1);
-            let ptr = self.data_raw();
-            let val = ptr::read(self.data_raw().add(idx));
+            let val = ptr::read(ptr.add(idx));
             ptr::copy(ptr.add(idx + 1), ptr.add(idx), old_len - idx - 1);
             val
         }
@@ -1090,13 +1101,18 @@ impl<T> ThinVec<T> {
     /// assert_eq!(v.swap_remove(0), "foo");
     /// assert_eq!(v, ["baz", "qux"]);
     /// ```
+    // CENTRIFUGE: `T::size_of() >= 0` always holds; flux lacks the axiom for a
+    // generic `T` (log/FLUX_ISSUES.md #1), and the slice-pointer offsets need it.
+    #[flux_rs::spec(fn(self: &mut ThinVec<T>, idx: usize) -> T requires T::size_of() >= 0)]
     pub fn swap_remove(&mut self, idx: usize) -> T {
-        let old_len = self.len();
+        // CENTRIFUGE: pointer and length from one `as_mut_slice()`, as in `pop`.
+        let v = self.as_mut_slice();
+        let old_len = v.len();
+        let ptr = v.as_mut_ptr();
 
         assert!(idx < old_len, "Index out of bounds");
 
         unsafe {
-            let ptr = self.data_raw();
             ptr::swap(ptr.add(idx), ptr.add(old_len - 1));
             self.set_len_non_singleton(old_len - 1);
             ptr::read(ptr.add(old_len - 1))
@@ -1438,11 +1454,12 @@ impl<T> ThinVec<T> {
     where
         F: FnMut(&mut T) -> bool,
     {
-        let len = self.len();
+        // CENTRIFUGE: `len` is taken from the slice (the same header read) so the
+        // loop bound and `v[i]` agree for flux. Was `self.len()` before borrowing.
+        let v = &mut self[..];
+        let len = v.len();
         let mut del = 0;
         {
-            let v = &mut self[..];
-
             for i in 0..len {
                 if !f(&mut v[i]) {
                     del += 1;
@@ -1474,6 +1491,9 @@ impl<T> ThinVec<T> {
     /// assert_eq!(vec, [10, 20, 30, 20]);
     /// # }
     /// ```
+    // CENTRIFUGE: `T::size_of() >= 0` always holds; flux lacks the axiom for a
+    // generic `T` (log/FLUX_ISSUES.md #1), and the slice-pointer offsets need it.
+    #[flux_rs::spec(fn(self: &mut ThinVec<T>, key: F) requires T::size_of() >= 0)]
     pub fn dedup_by_key<F, K>(&mut self, mut key: F)
     where
         F: FnMut(&mut T) -> K,
@@ -1505,19 +1525,25 @@ impl<T> ThinVec<T> {
     /// # }
     /// ```
     #[allow(clippy::swap_ptr_to_ref)]
+    // CENTRIFUGE: `T::size_of() >= 0` always holds; flux lacks the axiom for a
+    // generic `T` (log/FLUX_ISSUES.md #1), and the slice-pointer offsets need it.
+    #[flux_rs::spec(fn(self: &mut ThinVec<T>, same_bucket: F) requires T::size_of() >= 0)]
     pub fn dedup_by<F>(&mut self, mut same_bucket: F)
     where
         F: FnMut(&mut T, &mut T) -> bool,
     {
         // See the comments in `Vec::dedup` for a detailed explanation of this code.
         unsafe {
-            let ln = self.len();
+            // CENTRIFUGE: pointer and length from one `as_mut_slice()` (was
+            // `self.len()` + `self.as_mut_ptr()`), so flux can bound `p.add(r)`.
+            let v = self.as_mut_slice();
+            let ln = v.len();
             if ln <= 1 {
                 return;
             }
 
             // Avoid bounds checks by using raw pointers.
-            let p = self.as_mut_ptr();
+            let p = v.as_mut_ptr();
             let mut r: usize = 1;
             let mut w: usize = 1;
 
@@ -1560,9 +1586,10 @@ impl<T> ThinVec<T> {
     /// ```
     pub fn split_off(&mut self, at: usize) -> ThinVec<T> {
         let old_len = self.len();
-        let new_vec_len = old_len - at;
-
+        // CENTRIFUGE: the bounds check now comes before the subtraction it guards
+        // (was `old_len - at` first, which overflows in debug before the assert).
         assert!(at <= old_len, "Index out of bounds");
+        let new_vec_len = old_len - at;
 
         unsafe {
             let mut new_vec = ThinVec::with_capacity(new_vec_len);
@@ -2032,6 +2059,9 @@ impl<T: PartialEq> ThinVec<T> {
     /// assert_eq!(vec, [1, 2, 3, 2]);
     /// # }
     /// ```
+    // CENTRIFUGE: `T::size_of() >= 0` always holds; flux lacks the axiom for a
+    // generic `T` (log/FLUX_ISSUES.md #1), and the slice-pointer offsets need it.
+    #[flux_rs::spec(fn(self: &mut ThinVec<T>) requires T::size_of() >= 0)]
     pub fn dedup(&mut self) {
         self.dedup_by(|a, b| a == b)
     }
