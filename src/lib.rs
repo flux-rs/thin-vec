@@ -2536,7 +2536,7 @@ impl From<&str> for ThinVec<u8> {
     }
 }
 
-#[flux_rs::trusted_impl(reason = "ICE")]
+#[flux_rs::trusted_impl(reason = "CENTRIFUGE: flux ICE (flux-rs/flux#1800)")]
 impl<T, const N: usize> TryFrom<ThinVec<T>> for [T; N] {
     type Error = ThinVec<T>;
 
@@ -2575,7 +2575,7 @@ impl<T, const N: usize> TryFrom<ThinVec<T>> for [T; N] {
     /// assert_eq!(a, b' ');
     /// assert_eq!(b, b'd');
     /// ```
-    #[flux_rs::trusted(reason = "panicked at crates/flux-middle/src/builtin_assoc_refts.rs:135:76")]
+    #[flux_rs::trusted(reason = "CENTRIFUGE: flux ICE TooGeneric at builtin_assoc_refts.rs:135 (flux-rs/flux#1800)")]
     fn try_from(mut vec: ThinVec<T>) -> Result<[T; N], ThinVec<T>> {
         if vec.len() != N {
             return Err(vec);
@@ -2654,8 +2654,10 @@ impl<T> IntoIter<T> {
     }
 }
 
+#[flux_rs::trusted_impl(reason = "CENTRIFUGE: flux ICE infer.rs:937 on unannotated Iterator::next (flux-rs/flux#1821)")]
 impl<T> Iterator for IntoIter<T> {
     type Item = T;
+    #[flux_rs::trusted(reason = "CENTRIFUGE: flux ICE infer.rs:937 incompatible types `&strg Self` vs `&mut Self` on unannotated Iterator::next (flux-rs/flux#1821)")]
     fn next(&mut self) -> Option<T> {
         if self.start == self.vec.len() {
             None
@@ -2836,8 +2838,10 @@ pub struct Drain<'a, T> {
     tail: usize,
 }
 
+#[flux_rs::trusted_impl(reason = "CENTRIFUGE: flux ICE infer.rs:937 on unannotated Iterator::next (flux-rs/flux#1821)")]
 impl<'a, T> Iterator for Drain<'a, T> {
     type Item = T;
+    #[flux_rs::trusted(reason = "CENTRIFUGE: flux ICE infer.rs:937 incompatible types `&strg Self` vs `&mut Self` on unannotated Iterator::next (flux-rs/flux#1821)")]
     fn next(&mut self) -> Option<T> {
         self.iter.next().map(|x| unsafe { ptr::read(x) })
     }
@@ -2936,9 +2940,11 @@ pub struct Splice<'a, I: Iterator + 'a> {
     replace_with: I,
 }
 
+#[flux_rs::trusted_impl(reason = "CENTRIFUGE: flux ICE infer.rs:937 on unannotated Iterator::next (flux-rs/flux#1821)")]
 impl<I: Iterator> Iterator for Splice<'_, I> {
     type Item = I::Item;
 
+    #[flux_rs::trusted(reason = "CENTRIFUGE: flux ICE infer.rs:937 incompatible types `&strg Self` vs `&mut Self` on unannotated Iterator::next (flux-rs/flux#1821)")]
     fn next(&mut self) -> Option<Self::Item> {
         self.drain.next()
     }
@@ -3154,12 +3160,14 @@ pub struct ExtractIf<'a, T, F> {
     pred: F,
 }
 
+#[flux_rs::trusted_impl(reason = "CENTRIFUGE: flux ICE projections.rs:401 impossible case (higher-ranked `FnMut` bound; flux-rs/flux#1715)")]
 impl<T, F> Iterator for ExtractIf<'_, T, F>
 where
     F: FnMut(&mut T) -> bool,
 {
     type Item = T;
 
+    #[flux_rs::trusted(reason = "CENTRIFUGE: flux ICE projections.rs:401 impossible case (higher-ranked `FnMut` bound; flux-rs/flux#1715)")]
     fn next(&mut self) -> Option<T> {
         unsafe {
             let v = self.vec.data_raw();
