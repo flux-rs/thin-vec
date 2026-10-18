@@ -1,0 +1,120 @@
+[
+  {
+    "uid": 0,
+    "path": "Header",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 333,
+      "start_col": 1,
+      "end_line": 333,
+      "end_col": 14
+    },
+    "deps": [],
+    "target": "src/lib.rs:333:1"
+  },
+  {
+    "uid": 1,
+    "path": "ThinVec",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 498,
+      "start_col": 1,
+      "end_line": 498,
+      "end_col": 22
+    },
+    "deps": [
+      0
+    ],
+    "target": "src/lib.rs:498:1"
+  },
+  {
+    "uid": 2,
+    "path": "ThinVec<T>::clear::DropGuard",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 1173,
+      "start_col": 13,
+      "end_line": 1173,
+      "end_col": 36
+    },
+    "deps": [
+      1
+    ],
+    "target": "src/lib.rs:1173:13"
+  },
+  {
+    "uid": 3,
+    "path": "IntoIter",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2610,
+      "start_col": 1,
+      "end_line": 2610,
+      "end_col": 23
+    },
+    "deps": [
+      1
+    ],
+    "target": "src/lib.rs:2610:1"
+  },
+  {
+    "uid": 4,
+    "path": "Drain",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2761,
+      "start_col": 1,
+      "end_line": 2761,
+      "end_col": 24
+    },
+    "deps": [
+      1
+    ],
+    "target": "src/lib.rs:2761:1"
+  },
+  {
+    "uid": 5,
+    "path": "ExtractIf",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 3149,
+      "start_col": 1,
+      "end_line": 3149,
+      "end_col": 31
+    },
+    "deps": [
+      1
+    ],
+    "target": "src/lib.rs:3149:1"
+  },
+  {
+    "uid": 6,
+    "path": "<IntoIter<T> as std::ops::Drop>::drop::drop_non_singleton::DropGuard",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2704,
+      "start_col": 13,
+      "end_line": 2704,
+      "end_col": 36
+    },
+    "deps": [
+      3
+    ],
+    "target": "src/lib.rs:2704:13"
+  },
+  {
+    "uid": 7,
+    "path": "Splice",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2938,
+      "start_col": 1,
+      "end_line": 2938,
+      "end_col": 40
+    },
+    "deps": [
+      4
+    ],
+    "target": "src/lib.rs:2938:1"
+  }
+]

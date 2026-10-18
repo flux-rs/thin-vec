@@ -1,0 +1,3682 @@
+[
+  {
+    "uid": 0,
+    "path": "impl_details::unpack_capacity",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 201,
+      "start_col": 5,
+      "end_line": 201,
+      "end_col": 51
+    },
+    "deps": [],
+    "target": "src/lib.rs:201:5"
+  },
+  {
+    "uid": 1,
+    "path": "ThinVec::<T>::is_zst",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 546,
+      "start_col": 5,
+      "end_line": 546,
+      "end_col": 30
+    },
+    "deps": [],
+    "target": "src/lib.rs:546:5"
+  },
+  {
+    "uid": 2,
+    "path": "alloc_align",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 434,
+      "start_col": 1,
+      "end_line": 434,
+      "end_col": 35
+    },
+    "deps": [],
+    "target": "src/lib.rs:434:1"
+  },
+  {
+    "uid": 3,
+    "path": "<ExtractIf<'_, T, F> as std::iter::Iterator>::size_hint",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 3195,
+      "start_col": 5,
+      "end_line": 3195,
+      "end_col": 50
+    },
+    "deps": [],
+    "target": "src/lib.rs:3195:5"
+  },
+  {
+    "uid": 4,
+    "path": "<Drain<'a, T> as std::iter::Iterator>::next",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2845,
+      "start_col": 5,
+      "end_line": 2845,
+      "end_col": 36
+    },
+    "deps": [],
+    "target": "src/lib.rs:2845:5"
+  },
+  {
+    "uid": 5,
+    "path": "<Drain<'a, T> as std::iter::Iterator>::size_hint",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2849,
+      "start_col": 5,
+      "end_line": 2849,
+      "end_col": 50
+    },
+    "deps": [],
+    "target": "src/lib.rs:2849:5"
+  },
+  {
+    "uid": 6,
+    "path": "<Splice<'a, I> as std::fmt::Debug>::fmt",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2937,
+      "start_col": 10,
+      "end_line": 2937,
+      "end_col": 15
+    },
+    "deps": [],
+    "target": "src/lib.rs:2937:10"
+  },
+  {
+    "uid": 7,
+    "path": "<Drain<'a, T> as std::iter::Iterator>::next::{closure#0}",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2846,
+      "start_col": 30,
+      "end_line": 2846,
+      "end_col": 33
+    },
+    "deps": [],
+    "target": "src/lib.rs:2846:30"
+  },
+  {
+    "uid": 8,
+    "path": "Header::len",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 341,
+      "start_col": 5,
+      "end_line": 341,
+      "end_col": 27
+    },
+    "deps": [],
+    "target": "src/lib.rs:341:5"
+  },
+  {
+    "uid": 9,
+    "path": "impl_details::assert_size",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 190,
+      "start_col": 5,
+      "end_line": 190,
+      "end_col": 45
+    },
+    "deps": [],
+    "target": "src/lib.rs:190:5"
+  },
+  {
+    "uid": 10,
+    "path": "len_to_ptr_unchecked",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 489,
+      "start_col": 1,
+      "end_line": 489,
+      "end_col": 73
+    },
+    "deps": [],
+    "target": "src/lib.rs:489:1"
+  },
+  {
+    "uid": 11,
+    "path": "<ThinVec<u8> as std::io::Write>::flush",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 3240,
+      "start_col": 5,
+      "end_line": 3240,
+      "end_col": 47
+    },
+    "deps": [],
+    "target": "src/lib.rs:3240:5"
+  },
+  {
+    "uid": 12,
+    "path": "ThinVec::<T>::is_zst",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 546,
+      "start_col": 5,
+      "end_line": 546,
+      "end_col": 30
+    },
+    "deps": [],
+    "target": "src/lib.rs:546:5"
+  },
+  {
+    "uid": 13,
+    "path": "alloc_align",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 434,
+      "start_col": 1,
+      "end_line": 434,
+      "end_col": 35
+    },
+    "deps": [],
+    "target": "src/lib.rs:434:1"
+  },
+  {
+    "uid": 14,
+    "path": "impl_details::pack_capacity_and_auto",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 195,
+      "start_col": 5,
+      "end_line": 195,
+      "end_col": 73
+    },
+    "deps": [],
+    "target": "src/lib.rs:195:5"
+  },
+  {
+    "uid": 15,
+    "path": "capacity_overflow",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 290,
+      "start_col": 1,
+      "end_line": 290,
+      "end_col": 28
+    },
+    "deps": [],
+    "target": "src/lib.rs:290:1"
+  },
+  {
+    "uid": 16,
+    "path": "impl_details::is_auto",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 206,
+      "start_col": 5,
+      "end_line": 206,
+      "end_col": 40
+    },
+    "deps": [],
+    "target": "src/lib.rs:206:5"
+  },
+  {
+    "uid": 17,
+    "path": "ThinVec::<T>::uses_stack_allocated_buffer",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 1923,
+      "start_col": 5,
+      "end_line": 1923,
+      "end_col": 50
+    },
+    "deps": [],
+    "target": "src/lib.rs:1923:5"
+  },
+  {
+    "uid": 18,
+    "path": "ThinVec::<T>::uses_stack_allocated_buffer",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 1923,
+      "start_col": 5,
+      "end_line": 1923,
+      "end_col": 50
+    },
+    "deps": [],
+    "target": "src/lib.rs:1923:5"
+  },
+  {
+    "uid": 19,
+    "path": "<Drain<'a, T> as std::iter::DoubleEndedIterator>::next_back",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2855,
+      "start_col": 5,
+      "end_line": 2855,
+      "end_col": 41
+    },
+    "deps": [],
+    "target": "src/lib.rs:2855:5"
+  },
+  {
+    "uid": 20,
+    "path": "Drain::<'a, T>::as_slice",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2910,
+      "start_col": 5,
+      "end_line": 2910,
+      "end_col": 35
+    },
+    "deps": [],
+    "target": "src/lib.rs:2910:5"
+  },
+  {
+    "uid": 21,
+    "path": "<Drain<'_, T> as std::fmt::Debug>::fmt",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2890,
+      "start_col": 5,
+      "end_line": 2890,
+      "end_col": 61
+    },
+    "deps": [],
+    "target": "src/lib.rs:2890:5"
+  },
+  {
+    "uid": 22,
+    "path": "<Drain<'a, T> as std::iter::DoubleEndedIterator>::next_back::{closure#0}",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2856,
+      "start_col": 35,
+      "end_line": 2856,
+      "end_col": 38
+    },
+    "deps": [],
+    "target": "src/lib.rs:2856:35"
+  },
+  {
+    "uid": 23,
+    "path": "<ThinVec<T> as std::iter::IntoIterator>::into_iter",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2328,
+      "start_col": 5,
+      "end_line": 2328,
+      "end_col": 38
+    },
+    "deps": [],
+    "target": "src/lib.rs:2328:5"
+  },
+  {
+    "uid": 24,
+    "path": "<ThinVec<T> as std::convert::From<&[T]>>::from",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2414,
+      "start_col": 5,
+      "end_line": 2414,
+      "end_col": 35
+    },
+    "deps": [],
+    "target": "src/lib.rs:2414:5"
+  },
+  {
+    "uid": 25,
+    "path": "<ThinVec<T> as std::convert::From<std::vec::Vec<T>>>::from",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2482,
+      "start_col": 5,
+      "end_line": 2482,
+      "end_col": 31
+    },
+    "deps": [],
+    "target": "src/lib.rs:2482:5"
+  },
+  {
+    "uid": 26,
+    "path": "<ThinVec<T> as std::convert::From<std::boxed::Box<[T]>>>::from",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2463,
+      "start_col": 5,
+      "end_line": 2463,
+      "end_col": 33
+    },
+    "deps": [],
+    "target": "src/lib.rs:2463:5"
+  },
+  {
+    "uid": 27,
+    "path": "<ThinVec<T> as std::convert::From<[T; N]>>::from",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2444,
+      "start_col": 5,
+      "end_line": 2444,
+      "end_col": 37
+    },
+    "deps": [],
+    "target": "src/lib.rs:2444:5"
+  },
+  {
+    "uid": 28,
+    "path": "<ThinVec<T> as std::convert::From<&mut [T]>>::from",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2429,
+      "start_col": 5,
+      "end_line": 2429,
+      "end_col": 39
+    },
+    "deps": [],
+    "target": "src/lib.rs:2429:5"
+  },
+  {
+    "uid": 29,
+    "path": "<ThinVec<T> as std::convert::From<&[T]>>::from",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2414,
+      "start_col": 5,
+      "end_line": 2414,
+      "end_col": 35
+    },
+    "deps": [],
+    "target": "src/lib.rs:2414:5"
+  },
+  {
+    "uid": 30,
+    "path": "ThinVec::<T>::dedup::{closure#0}",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2023,
+      "start_col": 23,
+      "end_line": 2023,
+      "end_col": 29
+    },
+    "deps": [],
+    "target": "src/lib.rs:2023:23"
+  },
+  {
+    "uid": 31,
+    "path": "ThinVec::<T>::extract_if::slice_index_fail",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 1760,
+      "start_col": 9,
+      "end_line": 1760,
+      "end_col": 71
+    },
+    "deps": [],
+    "target": "src/lib.rs:1760:9"
+  },
+  {
+    "uid": 32,
+    "path": "ThinVec::<T>::dedup_by_key::{closure#0}",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 1470,
+      "start_col": 23,
+      "end_line": 1470,
+      "end_col": 29
+    },
+    "deps": [],
+    "target": "src/lib.rs:1470:23"
+  },
+  {
+    "uid": 33,
+    "path": "ThinVec::<T>::retain::{closure#0}",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 1401,
+      "start_col": 25,
+      "end_line": 1401,
+      "end_col": 28
+    },
+    "deps": [],
+    "target": "src/lib.rs:1401:25"
+  },
+  {
+    "uid": 34,
+    "path": "len_to_ptr_unchecked",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 489,
+      "start_col": 1,
+      "end_line": 489,
+      "end_col": 73
+    },
+    "deps": [],
+    "target": "src/lib.rs:489:1"
+  },
+  {
+    "uid": 35,
+    "path": "Header::cap",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 350,
+      "start_col": 5,
+      "end_line": 350,
+      "end_col": 27
+    },
+    "deps": [
+      0
+    ],
+    "target": "src/lib.rs:350:5"
+  },
+  {
+    "uid": 36,
+    "path": "ThinVec::<T>::header",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 667,
+      "start_col": 5,
+      "end_line": 667,
+      "end_col": 39
+    },
+    "deps": [
+      1
+    ],
+    "target": "src/lib.rs:667:5"
+  },
+  {
+    "uid": 37,
+    "path": "ThinVec::<T>::ptr",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 659,
+      "start_col": 5,
+      "end_line": 659,
+      "end_col": 40
+    },
+    "deps": [
+      1
+    ],
+    "target": "src/lib.rs:659:5"
+  },
+  {
+    "uid": 38,
+    "path": "ThinVec::<T>::is_singleton",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 1891,
+      "start_col": 5,
+      "end_line": 1891,
+      "end_col": 35
+    },
+    "deps": [
+      1
+    ],
+    "target": "src/lib.rs:1891:5"
+  },
+  {
+    "uid": 39,
+    "path": "padding",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 417,
+      "start_col": 1,
+      "end_line": 417,
+      "end_col": 31
+    },
+    "deps": [
+      2
+    ],
+    "target": "src/lib.rs:417:1"
+  },
+  {
+    "uid": 40,
+    "path": "<Splice<'_, I> as std::iter::Iterator>::next",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2948,
+      "start_col": 5,
+      "end_line": 2948,
+      "end_col": 45
+    },
+    "deps": [
+      4
+    ],
+    "target": "src/lib.rs:2948:5"
+  },
+  {
+    "uid": 41,
+    "path": "<Splice<'_, I> as std::iter::Iterator>::size_hint",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2952,
+      "start_col": 5,
+      "end_line": 2952,
+      "end_col": 50
+    },
+    "deps": [
+      5
+    ],
+    "target": "src/lib.rs:2952:5"
+  },
+  {
+    "uid": 42,
+    "path": "Header::set_len",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 346,
+      "start_col": 5,
+      "end_line": 346,
+      "end_col": 38
+    },
+    "deps": [
+      9
+    ],
+    "target": "src/lib.rs:346:5"
+  },
+  {
+    "uid": 43,
+    "path": "ThinVec::<T>::set_len_zst",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 885,
+      "start_col": 5,
+      "end_line": 885,
+      "end_col": 49
+    },
+    "deps": [
+      1,
+      10
+    ],
+    "target": "src/lib.rs:885:5"
+  },
+  {
+    "uid": 44,
+    "path": "ThinVec::<T>::ptr",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 659,
+      "start_col": 5,
+      "end_line": 659,
+      "end_col": 40
+    },
+    "deps": [
+      12
+    ],
+    "target": "src/lib.rs:659:5"
+  },
+  {
+    "uid": 45,
+    "path": "ThinVec::<T>::is_singleton",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 1891,
+      "start_col": 5,
+      "end_line": 1891,
+      "end_col": 35
+    },
+    "deps": [
+      12
+    ],
+    "target": "src/lib.rs:1891:5"
+  },
+  {
+    "uid": 46,
+    "path": "ThinVec::<T>::set_len_zst",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 885,
+      "start_col": 5,
+      "end_line": 885,
+      "end_col": 49
+    },
+    "deps": [
+      10,
+      12
+    ],
+    "target": "src/lib.rs:885:5"
+  },
+  {
+    "uid": 47,
+    "path": "ThinVec::<T>::header",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 667,
+      "start_col": 5,
+      "end_line": 667,
+      "end_col": 39
+    },
+    "deps": [
+      12
+    ],
+    "target": "src/lib.rs:667:5"
+  },
+  {
+    "uid": 48,
+    "path": "padding",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 417,
+      "start_col": 1,
+      "end_line": 417,
+      "end_col": 31
+    },
+    "deps": [
+      13
+    ],
+    "target": "src/lib.rs:417:1"
+  },
+  {
+    "uid": 49,
+    "path": "Header::set_cap_and_auto",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 354,
+      "start_col": 5,
+      "end_line": 354,
+      "end_col": 62
+    },
+    "deps": [
+      0,
+      9,
+      14
+    ],
+    "target": "src/lib.rs:354:5"
+  },
+  {
+    "uid": 50,
+    "path": "<std::option::Option<T> as UnwrapCapOverflow<T>>::unwrap_cap_overflow",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 299,
+      "start_col": 5,
+      "end_line": 299,
+      "end_col": 38
+    },
+    "deps": [
+      15
+    ],
+    "target": "src/lib.rs:299:5"
+  },
+  {
+    "uid": 51,
+    "path": "<std::option::Option<T> as UnwrapCapOverflow<T>>::unwrap_cap_overflow",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 299,
+      "start_col": 5,
+      "end_line": 299,
+      "end_col": 38
+    },
+    "deps": [
+      15
+    ],
+    "target": "src/lib.rs:299:5"
+  },
+  {
+    "uid": 52,
+    "path": "<std::result::Result<T, E> as UnwrapCapOverflow<T>>::unwrap_cap_overflow",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 308,
+      "start_col": 5,
+      "end_line": 308,
+      "end_col": 38
+    },
+    "deps": [
+      15
+    ],
+    "target": "src/lib.rs:308:5"
+  },
+  {
+    "uid": 53,
+    "path": "<std::option::Option<T> as UnwrapCapOverflow<T>>::unwrap_cap_overflow",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 299,
+      "start_col": 5,
+      "end_line": 299,
+      "end_col": 38
+    },
+    "deps": [
+      15
+    ],
+    "target": "src/lib.rs:299:5"
+  },
+  {
+    "uid": 54,
+    "path": "<std::result::Result<T, E> as UnwrapCapOverflow<T>>::unwrap_cap_overflow",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 308,
+      "start_col": 5,
+      "end_line": 308,
+      "end_col": 38
+    },
+    "deps": [
+      15
+    ],
+    "target": "src/lib.rs:308:5"
+  },
+  {
+    "uid": 55,
+    "path": "<std::option::Option<T> as UnwrapCapOverflow<T>>::unwrap_cap_overflow",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 299,
+      "start_col": 5,
+      "end_line": 299,
+      "end_col": 38
+    },
+    "deps": [
+      15
+    ],
+    "target": "src/lib.rs:299:5"
+  },
+  {
+    "uid": 56,
+    "path": "Header::is_auto",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 364,
+      "start_col": 5,
+      "end_line": 364,
+      "end_col": 30
+    },
+    "deps": [
+      16
+    ],
+    "target": "src/lib.rs:364:5"
+  },
+  {
+    "uid": 57,
+    "path": "<Splice<'_, I> as std::iter::DoubleEndedIterator>::next_back",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2958,
+      "start_col": 5,
+      "end_line": 2958,
+      "end_col": 50
+    },
+    "deps": [
+      19
+    ],
+    "target": "src/lib.rs:2958:5"
+  },
+  {
+    "uid": 58,
+    "path": "<Drain<'a, T> as std::convert::AsRef<[T]>>::as_ref",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2918,
+      "start_col": 5,
+      "end_line": 2918,
+      "end_col": 29
+    },
+    "deps": [
+      20
+    ],
+    "target": "src/lib.rs:2918:5"
+  },
+  {
+    "uid": 59,
+    "path": "<impl std::convert::From<ThinVec<T>> for std::boxed::Box<[T]>>::from",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2519,
+      "start_col": 5,
+      "end_line": 2519,
+      "end_col": 35
+    },
+    "deps": [
+      23
+    ],
+    "target": "src/lib.rs:2519:5"
+  },
+  {
+    "uid": 60,
+    "path": "<impl std::convert::From<ThinVec<T>> for std::vec::Vec<T>>::from",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2500,
+      "start_col": 5,
+      "end_line": 2500,
+      "end_col": 35
+    },
+    "deps": [
+      23
+    ],
+    "target": "src/lib.rs:2500:5"
+  },
+  {
+    "uid": 61,
+    "path": "<ThinVec<u8> as std::convert::From<&str>>::from",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2534,
+      "start_col": 5,
+      "end_line": 2534,
+      "end_col": 36
+    },
+    "deps": [
+      24
+    ],
+    "target": "src/lib.rs:2534:5"
+  },
+  {
+    "uid": 62,
+    "path": "ThinVec::<T>::extract_if::slice_range",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 1788,
+      "start_col": 9,
+      "end_line": 1790,
+      "end_col": 40
+    },
+    "deps": [
+      31
+    ],
+    "target": "src/lib.rs:1788:9"
+  },
+  {
+    "uid": 63,
+    "path": "ThinVec::<T>::len",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 740,
+      "start_col": 5,
+      "end_line": 740,
+      "end_col": 31
+    },
+    "deps": [
+      36,
+      1,
+      8
+    ],
+    "target": "src/lib.rs:740:5"
+  },
+  {
+    "uid": 64,
+    "path": "ThinVec::<T>::capacity",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 776,
+      "start_col": 5,
+      "end_line": 776,
+      "end_col": 36
+    },
+    "deps": [
+      35,
+      36,
+      1
+    ],
+    "target": "src/lib.rs:776:5"
+  },
+  {
+    "uid": 65,
+    "path": "ThinVec::<T>::header_mut",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 723,
+      "start_col": 5,
+      "end_line": 723,
+      "end_col": 51
+    },
+    "deps": [
+      1,
+      37,
+      38
+    ],
+    "target": "src/lib.rs:723:5"
+  },
+  {
+    "uid": 66,
+    "path": "ThinVec::<T>::has_allocation",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 1931,
+      "start_col": 5,
+      "end_line": 1931,
+      "end_col": 37
+    },
+    "deps": [
+      1,
+      38,
+      18
+    ],
+    "target": "src/lib.rs:1931:5"
+  },
+  {
+    "uid": 67,
+    "path": "ThinVec::<T>::has_capacity",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 785,
+      "start_col": 5,
+      "end_line": 785,
+      "end_col": 39
+    },
+    "deps": [
+      38
+    ],
+    "target": "src/lib.rs:785:5"
+  },
+  {
+    "uid": 68,
+    "path": "ThinVec::<T>::data_raw",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 672,
+      "start_col": 5,
+      "end_line": 672,
+      "end_col": 33
+    },
+    "deps": [
+      35,
+      36,
+      1,
+      39
+    ],
+    "target": "src/lib.rs:672:5"
+  },
+  {
+    "uid": 69,
+    "path": "ThinVec::<T>::new",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 553,
+      "start_col": 5,
+      "end_line": 553,
+      "end_col": 37
+    },
+    "deps": [
+      1,
+      39,
+      10
+    ],
+    "target": "src/lib.rs:553:5"
+  },
+  {
+    "uid": 70,
+    "path": "ThinVec::<T>::header_mut",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 723,
+      "start_col": 5,
+      "end_line": 723,
+      "end_col": 51
+    },
+    "deps": [
+      44,
+      12,
+      45
+    ],
+    "target": "src/lib.rs:723:5"
+  },
+  {
+    "uid": 71,
+    "path": "ThinVec::<T>::has_allocation",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 1931,
+      "start_col": 5,
+      "end_line": 1931,
+      "end_col": 37
+    },
+    "deps": [
+      12,
+      45,
+      17
+    ],
+    "target": "src/lib.rs:1931:5"
+  },
+  {
+    "uid": 72,
+    "path": "ThinVec::<T>::capacity",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 776,
+      "start_col": 5,
+      "end_line": 776,
+      "end_col": 36
+    },
+    "deps": [
+      35,
+      12,
+      47
+    ],
+    "target": "src/lib.rs:776:5"
+  },
+  {
+    "uid": 73,
+    "path": "ThinVec::<T>::len",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 740,
+      "start_col": 5,
+      "end_line": 740,
+      "end_col": 31
+    },
+    "deps": [
+      8,
+      12,
+      47
+    ],
+    "target": "src/lib.rs:740:5"
+  },
+  {
+    "uid": 74,
+    "path": "ThinVec::<T>::data_raw",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 672,
+      "start_col": 5,
+      "end_line": 672,
+      "end_col": 33
+    },
+    "deps": [
+      35,
+      12,
+      47,
+      48
+    ],
+    "target": "src/lib.rs:672:5"
+  },
+  {
+    "uid": 75,
+    "path": "ThinVec::<T>::new",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 553,
+      "start_col": 5,
+      "end_line": 553,
+      "end_col": 37
+    },
+    "deps": [
+      10,
+      12,
+      48
+    ],
+    "target": "src/lib.rs:553:5"
+  },
+  {
+    "uid": 76,
+    "path": "alloc_size",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 390,
+      "start_col": 1,
+      "end_line": 390,
+      "end_col": 38
+    },
+    "deps": [
+      48,
+      51,
+      52
+    ],
+    "target": "src/lib.rs:390:1"
+  },
+  {
+    "uid": 77,
+    "path": "alloc_size",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 390,
+      "start_col": 1,
+      "end_line": 390,
+      "end_col": 38
+    },
+    "deps": [
+      39,
+      51,
+      52
+    ],
+    "target": "src/lib.rs:390:1"
+  },
+  {
+    "uid": 78,
+    "path": "ThinVec::<T>::is_auto_array",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 1918,
+      "start_col": 5,
+      "end_line": 1918,
+      "end_col": 36
+    },
+    "deps": [
+      56
+    ],
+    "target": "src/lib.rs:1918:5"
+  },
+  {
+    "uid": 79,
+    "path": "ThinVec::<T>::is_auto_array",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 1918,
+      "start_col": 5,
+      "end_line": 1918,
+      "end_col": 36
+    },
+    "deps": [
+      56
+    ],
+    "target": "src/lib.rs:1918:5"
+  },
+  {
+    "uid": 80,
+    "path": "<IntoIter<T> as std::iter::Iterator>::size_hint",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2673,
+      "start_col": 5,
+      "end_line": 2673,
+      "end_col": 50
+    },
+    "deps": [
+      63
+    ],
+    "target": "src/lib.rs:2673:5"
+  },
+  {
+    "uid": 81,
+    "path": "ThinVec::<T>::is_empty",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 761,
+      "start_col": 5,
+      "end_line": 761,
+      "end_col": 35
+    },
+    "deps": [
+      63
+    ],
+    "target": "src/lib.rs:761:5"
+  },
+  {
+    "uid": 82,
+    "path": "ThinVec::<T>::set_header_len",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 898,
+      "start_col": 5,
+      "end_line": 898,
+      "end_col": 52
+    },
+    "deps": [
+      42,
+      65
+    ],
+    "target": "src/lib.rs:898:5"
+  },
+  {
+    "uid": 83,
+    "path": "<ExtractIf<'_, T, F> as std::iter::Iterator>::next",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 3171,
+      "start_col": 5,
+      "end_line": 3171,
+      "end_col": 36
+    },
+    "deps": [
+      68
+    ],
+    "target": "src/lib.rs:3171:5"
+  },
+  {
+    "uid": 84,
+    "path": "<IntoIter<T> as std::iter::Iterator>::next",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2661,
+      "start_col": 5,
+      "end_line": 2661,
+      "end_col": 36
+    },
+    "deps": [
+      68,
+      63
+    ],
+    "target": "src/lib.rs:2661:5"
+  },
+  {
+    "uid": 85,
+    "path": "ThinVec::<T>::as_slice",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 1199,
+      "start_col": 5,
+      "end_line": 1199,
+      "end_col": 35
+    },
+    "deps": [
+      68,
+      63
+    ],
+    "target": "src/lib.rs:1199:5"
+  },
+  {
+    "uid": 86,
+    "path": "IntoIter::<T>::as_slice",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2629,
+      "start_col": 5,
+      "end_line": 2629,
+      "end_col": 35
+    },
+    "deps": [
+      68
+    ],
+    "target": "src/lib.rs:2629:5"
+  },
+  {
+    "uid": 87,
+    "path": "ThinVec::<T>::as_mut_slice",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 1215,
+      "start_col": 5,
+      "end_line": 1215,
+      "end_col": 47
+    },
+    "deps": [
+      68,
+      63
+    ],
+    "target": "src/lib.rs:1215:5"
+  },
+  {
+    "uid": 88,
+    "path": "IntoIter::<T>::as_raw_mut_slice",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2652,
+      "start_col": 5,
+      "end_line": 2652,
+      "end_col": 47
+    },
+    "deps": [
+      68
+    ],
+    "target": "src/lib.rs:2652:5"
+  },
+  {
+    "uid": 89,
+    "path": "<ThinVec<T> as std::default::Default>::default",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2389,
+      "start_col": 5,
+      "end_line": 2389,
+      "end_col": 31
+    },
+    "deps": [
+      69
+    ],
+    "target": "src/lib.rs:2389:5"
+  },
+  {
+    "uid": 90,
+    "path": "ThinVec::<T>::set_header_len",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 898,
+      "start_col": 5,
+      "end_line": 898,
+      "end_col": 52
+    },
+    "deps": [
+      42,
+      70
+    ],
+    "target": "src/lib.rs:898:5"
+  },
+  {
+    "uid": 91,
+    "path": "layout",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 446,
+      "start_col": 1,
+      "end_line": 446,
+      "end_col": 35
+    },
+    "deps": [
+      13,
+      50,
+      76
+    ],
+    "target": "src/lib.rs:446:1"
+  },
+  {
+    "uid": 92,
+    "path": "layout",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 446,
+      "start_col": 1,
+      "end_line": 446,
+      "end_col": 35
+    },
+    "deps": [
+      2,
+      50,
+      77
+    ],
+    "target": "src/lib.rs:446:1"
+  },
+  {
+    "uid": 93,
+    "path": "ThinVec::<T>::set_len_non_singleton",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 906,
+      "start_col": 5,
+      "end_line": 906,
+      "end_col": 59
+    },
+    "deps": [
+      1,
+      82,
+      38,
+      43
+    ],
+    "target": "src/lib.rs:906:5"
+  },
+  {
+    "uid": 94,
+    "path": "<ThinVec<T> as std::ops::Deref>::deref",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2079,
+      "start_col": 5,
+      "end_line": 2079,
+      "end_col": 28
+    },
+    "deps": [
+      85
+    ],
+    "target": "src/lib.rs:2079:5"
+  },
+  {
+    "uid": 95,
+    "path": "<ThinVec<T> as std::convert::AsRef<[T]>>::as_ref",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2117,
+      "start_col": 5,
+      "end_line": 2117,
+      "end_col": 29
+    },
+    "deps": [
+      85
+    ],
+    "target": "src/lib.rs:2117:5"
+  },
+  {
+    "uid": 96,
+    "path": "<ThinVec<T> as std::borrow::Borrow<[T]>>::borrow",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2105,
+      "start_col": 5,
+      "end_line": 2105,
+      "end_col": 29
+    },
+    "deps": [
+      85
+    ],
+    "target": "src/lib.rs:2105:5"
+  },
+  {
+    "uid": 97,
+    "path": "<IntoIter<T> as std::clone::Clone>::clone",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2738,
+      "start_col": 5,
+      "end_line": 2738,
+      "end_col": 28
+    },
+    "deps": [
+      23,
+      86
+    ],
+    "target": "src/lib.rs:2738:5"
+  },
+  {
+    "uid": 98,
+    "path": "<IntoIter<T> as std::convert::AsRef<[T]>>::as_ref",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2731,
+      "start_col": 5,
+      "end_line": 2731,
+      "end_col": 29
+    },
+    "deps": [
+      86
+    ],
+    "target": "src/lib.rs:2731:5"
+  },
+  {
+    "uid": 99,
+    "path": "<IntoIter<T> as std::fmt::Debug>::fmt",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2725,
+      "start_col": 5,
+      "end_line": 2725,
+      "end_col": 61
+    },
+    "deps": [
+      86
+    ],
+    "target": "src/lib.rs:2725:5"
+  },
+  {
+    "uid": 100,
+    "path": "<ThinVec<T> as std::ops::DerefMut>::deref_mut",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2085,
+      "start_col": 5,
+      "end_line": 2085,
+      "end_col": 40
+    },
+    "deps": [
+      87
+    ],
+    "target": "src/lib.rs:2085:5"
+  },
+  {
+    "uid": 101,
+    "path": "<ThinVec<T> as std::borrow::BorrowMut<[T]>>::borrow_mut",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2111,
+      "start_col": 5,
+      "end_line": 2111,
+      "end_col": 41
+    },
+    "deps": [
+      87
+    ],
+    "target": "src/lib.rs:2111:5"
+  },
+  {
+    "uid": 102,
+    "path": "IntoIter::<T>::as_mut_slice",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2648,
+      "start_col": 5,
+      "end_line": 2648,
+      "end_col": 47
+    },
+    "deps": [
+      88
+    ],
+    "target": "src/lib.rs:2648:5"
+  },
+  {
+    "uid": 103,
+    "path": "ThinVec::<T>::set_len_non_singleton",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 906,
+      "start_col": 5,
+      "end_line": 906,
+      "end_col": 59
+    },
+    "deps": [
+      90,
+      12,
+      45,
+      46
+    ],
+    "target": "src/lib.rs:906:5"
+  },
+  {
+    "uid": 104,
+    "path": "header_with_capacity",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 457,
+      "start_col": 1,
+      "end_line": 457,
+      "end_col": 73
+    },
+    "deps": [
+      9,
+      14,
+      91
+    ],
+    "target": "src/lib.rs:457:1"
+  },
+  {
+    "uid": 105,
+    "path": "header_with_capacity",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 457,
+      "start_col": 1,
+      "end_line": 457,
+      "end_col": 73
+    },
+    "deps": [
+      9,
+      14,
+      92
+    ],
+    "target": "src/lib.rs:457:1"
+  },
+  {
+    "uid": 106,
+    "path": "ThinVec::<T>::set_len",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 870,
+      "start_col": 5,
+      "end_line": 870,
+      "end_col": 49
+    },
+    "deps": [
+      93,
+      38
+    ],
+    "target": "src/lib.rs:870:5"
+  },
+  {
+    "uid": 107,
+    "path": "ThinVec::<T>::push_unchecked",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 951,
+      "start_col": 5,
+      "end_line": 951,
+      "end_col": 48
+    },
+    "deps": [
+      68,
+      63,
+      93,
+      64
+    ],
+    "target": "src/lib.rs:951:5"
+  },
+  {
+    "uid": 108,
+    "path": "<Drain<'a, T> as std::ops::Drop>::drop",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2869,
+      "start_col": 5,
+      "end_line": 2869,
+      "end_col": 23
+    },
+    "deps": [
+      68,
+      63,
+      93,
+      38
+    ],
+    "target": "src/lib.rs:2869:5"
+  },
+  {
+    "uid": 109,
+    "path": "<<IntoIter<T> as std::ops::Drop>::drop::drop_non_singleton::DropGuard<'_, T> as std::ops::Drop>::drop",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2706,
+      "start_col": 17,
+      "end_line": 2706,
+      "end_col": 35
+    },
+    "deps": [
+      93
+    ],
+    "target": "src/lib.rs:2706:17"
+  },
+  {
+    "uid": 110,
+    "path": "ThinVec::<T>::pop",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 973,
+      "start_col": 5,
+      "end_line": 973,
+      "end_col": 39
+    },
+    "deps": [
+      68,
+      63,
+      93
+    ],
+    "target": "src/lib.rs:973:5"
+  },
+  {
+    "uid": 111,
+    "path": "ThinVec::<T>::truncate",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 1142,
+      "start_col": 5,
+      "end_line": 1142,
+      "end_col": 43
+    },
+    "deps": [
+      68,
+      63,
+      93
+    ],
+    "target": "src/lib.rs:1142:5"
+  },
+  {
+    "uid": 112,
+    "path": "ThinVec::<T>::swap_remove",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 1081,
+      "start_col": 5,
+      "end_line": 1081,
+      "end_col": 51
+    },
+    "deps": [
+      68,
+      63,
+      93
+    ],
+    "target": "src/lib.rs:1081:5"
+  },
+  {
+    "uid": 113,
+    "path": "ThinVec::<T>::remove",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 1041,
+      "start_col": 5,
+      "end_line": 1041,
+      "end_col": 46
+    },
+    "deps": [
+      68,
+      63,
+      93
+    ],
+    "target": "src/lib.rs:1041:5"
+  },
+  {
+    "uid": 114,
+    "path": "<ThinVec<T> as std::ops::Index<I>>::index",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2093,
+      "start_col": 5,
+      "end_line": 2093,
+      "end_col": 47
+    },
+    "deps": [
+      94
+    ],
+    "target": "src/lib.rs:2093:5"
+  },
+  {
+    "uid": 115,
+    "path": "<&'a ThinVec<T> as std::iter::IntoIterator>::into_iter",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2340,
+      "start_col": 5,
+      "end_line": 2340,
+      "end_col": 45
+    },
+    "deps": [
+      94
+    ],
+    "target": "src/lib.rs:2340:5"
+  },
+  {
+    "uid": 116,
+    "path": "<ThinVec<T> as std::fmt::Debug>::fmt",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2150,
+      "start_col": 5,
+      "end_line": 2150,
+      "end_col": 61
+    },
+    "deps": [
+      94
+    ],
+    "target": "src/lib.rs:2150:5"
+  },
+  {
+    "uid": 117,
+    "path": "<ThinVec<T> as std::ops::IndexMut<I>>::index_mut",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2099,
+      "start_col": 5,
+      "end_line": 2099,
+      "end_col": 59
+    },
+    "deps": [
+      100
+    ],
+    "target": "src/lib.rs:2099:5"
+  },
+  {
+    "uid": 118,
+    "path": "<&'a mut ThinVec<T> as std::iter::IntoIterator>::into_iter",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2349,
+      "start_col": 5,
+      "end_line": 2349,
+      "end_col": 48
+    },
+    "deps": [
+      100
+    ],
+    "target": "src/lib.rs:2349:5"
+  },
+  {
+    "uid": 119,
+    "path": "ThinVec::<T>::push_unchecked",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 951,
+      "start_col": 5,
+      "end_line": 951,
+      "end_col": 48
+    },
+    "deps": [
+      103,
+      74,
+      72,
+      73
+    ],
+    "target": "src/lib.rs:951:5"
+  },
+  {
+    "uid": 120,
+    "path": "ThinVec::<T>::reallocate",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 1841,
+      "start_col": 5,
+      "end_line": 1841,
+      "end_col": 52
+    },
+    "deps": [
+      42,
+      90,
+      44,
+      12,
+      74,
+      72,
+      73,
+      104,
+      91,
+      76,
+      78,
+      56,
+      49,
+      71
+    ],
+    "target": "src/lib.rs:1841:5"
+  },
+  {
+    "uid": 121,
+    "path": "ThinVec::<T>::with_capacity",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 626,
+      "start_col": 5,
+      "end_line": 626,
+      "end_col": 45
+    },
+    "deps": [
+      10,
+      12,
+      48,
+      104,
+      75
+    ],
+    "target": "src/lib.rs:626:5"
+  },
+  {
+    "uid": 122,
+    "path": "ThinVec::<T>::reallocate",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 1841,
+      "start_col": 5,
+      "end_line": 1841,
+      "end_col": 52
+    },
+    "deps": [
+      68,
+      1,
+      63,
+      82,
+      42,
+      37,
+      56,
+      49,
+      105,
+      92,
+      77,
+      79,
+      64,
+      66
+    ],
+    "target": "src/lib.rs:1841:5"
+  },
+  {
+    "uid": 123,
+    "path": "ThinVec::<T>::with_capacity",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 626,
+      "start_col": 5,
+      "end_line": 626,
+      "end_col": 45
+    },
+    "deps": [
+      1,
+      39,
+      10,
+      105,
+      69
+    ],
+    "target": "src/lib.rs:626:5"
+  },
+  {
+    "uid": 124,
+    "path": "<impl std::convert::TryFrom<ThinVec<T>> for [T; N]>::try_from",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2579,
+      "start_col": 5,
+      "end_line": 2579,
+      "end_col": 67
+    },
+    "deps": [
+      68,
+      63,
+      106
+    ],
+    "target": "src/lib.rs:2579:5"
+  },
+  {
+    "uid": 125,
+    "path": "<ExtractIf<'_, A, F> as std::ops::Drop>::drop",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 3201,
+      "start_col": 5,
+      "end_line": 3201,
+      "end_col": 23
+    },
+    "deps": [
+      68,
+      106
+    ],
+    "target": "src/lib.rs:3201:5"
+  },
+  {
+    "uid": 126,
+    "path": "Drain::<'_, T>::fill",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 3111,
+      "start_col": 5,
+      "end_line": 3111,
+      "end_col": 83
+    },
+    "deps": [
+      68,
+      63,
+      106
+    ],
+    "target": "src/lib.rs:3111:5"
+  },
+  {
+    "uid": 127,
+    "path": "ThinVec::<T>::extract_if",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 1751,
+      "start_col": 5,
+      "end_line": 1757,
+      "end_col": 34
+    },
+    "deps": [
+      63,
+      106,
+      62
+    ],
+    "target": "src/lib.rs:1751:5"
+  },
+  {
+    "uid": 128,
+    "path": "ThinVec::<T>::drain",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 1620,
+      "start_col": 5,
+      "end_line": 1622,
+      "end_col": 31
+    },
+    "deps": [
+      68,
+      63,
+      106
+    ],
+    "target": "src/lib.rs:1620:5"
+  },
+  {
+    "uid": 129,
+    "path": "<ThinVec<T>::clear::DropGuard<'_, T> as std::ops::Drop>::drop",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 1175,
+      "start_col": 17,
+      "end_line": 1175,
+      "end_col": 35
+    },
+    "deps": [
+      106
+    ],
+    "target": "src/lib.rs:1175:17"
+  },
+  {
+    "uid": 130,
+    "path": "<IntoIter<T> as std::iter::DoubleEndedIterator>::next_back",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2680,
+      "start_col": 5,
+      "end_line": 2680,
+      "end_col": 41
+    },
+    "deps": [
+      63,
+      110
+    ],
+    "target": "src/lib.rs:2680:5"
+  },
+  {
+    "uid": 131,
+    "path": "ThinVec::<T>::dedup_by",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 1496,
+      "start_col": 5,
+      "end_line": 1498,
+      "end_col": 42
+    },
+    "deps": [
+      63,
+      100,
+      111
+    ],
+    "target": "src/lib.rs:1496:5"
+  },
+  {
+    "uid": 132,
+    "path": "<ThinVec<A> as std::cmp::PartialEq<&'a [B; 32]>>::eq",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2310,
+      "start_col": 13,
+      "end_line": 2310,
+      "end_col": 54
+    },
+    "deps": [
+      114
+    ],
+    "target": "src/lib.rs:2310:13"
+  },
+  {
+    "uid": 133,
+    "path": "<ThinVec<A> as std::cmp::PartialEq<[B; 32]>>::eq",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2305,
+      "start_col": 13,
+      "end_line": 2305,
+      "end_col": 50
+    },
+    "deps": [
+      114
+    ],
+    "target": "src/lib.rs:2305:13"
+  },
+  {
+    "uid": 134,
+    "path": "<ThinVec<A> as std::cmp::PartialEq<&'a [B; 31]>>::eq",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2310,
+      "start_col": 13,
+      "end_line": 2310,
+      "end_col": 54
+    },
+    "deps": [
+      114
+    ],
+    "target": "src/lib.rs:2310:13"
+  },
+  {
+    "uid": 135,
+    "path": "<ThinVec<A> as std::cmp::PartialEq<[B; 31]>>::eq",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2305,
+      "start_col": 13,
+      "end_line": 2305,
+      "end_col": 50
+    },
+    "deps": [
+      114
+    ],
+    "target": "src/lib.rs:2305:13"
+  },
+  {
+    "uid": 136,
+    "path": "<ThinVec<A> as std::cmp::PartialEq<&'a [B; 30]>>::eq",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2310,
+      "start_col": 13,
+      "end_line": 2310,
+      "end_col": 54
+    },
+    "deps": [
+      114
+    ],
+    "target": "src/lib.rs:2310:13"
+  },
+  {
+    "uid": 137,
+    "path": "<ThinVec<A> as std::cmp::PartialEq<[B; 30]>>::eq",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2305,
+      "start_col": 13,
+      "end_line": 2305,
+      "end_col": 50
+    },
+    "deps": [
+      114
+    ],
+    "target": "src/lib.rs:2305:13"
+  },
+  {
+    "uid": 138,
+    "path": "<ThinVec<A> as std::cmp::PartialEq<&'a [B; 29]>>::eq",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2310,
+      "start_col": 13,
+      "end_line": 2310,
+      "end_col": 54
+    },
+    "deps": [
+      114
+    ],
+    "target": "src/lib.rs:2310:13"
+  },
+  {
+    "uid": 139,
+    "path": "<ThinVec<A> as std::cmp::PartialEq<[B; 29]>>::eq",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2305,
+      "start_col": 13,
+      "end_line": 2305,
+      "end_col": 50
+    },
+    "deps": [
+      114
+    ],
+    "target": "src/lib.rs:2305:13"
+  },
+  {
+    "uid": 140,
+    "path": "<ThinVec<A> as std::cmp::PartialEq<&'a [B; 28]>>::eq",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2310,
+      "start_col": 13,
+      "end_line": 2310,
+      "end_col": 54
+    },
+    "deps": [
+      114
+    ],
+    "target": "src/lib.rs:2310:13"
+  },
+  {
+    "uid": 141,
+    "path": "<ThinVec<A> as std::cmp::PartialEq<[B; 28]>>::eq",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2305,
+      "start_col": 13,
+      "end_line": 2305,
+      "end_col": 50
+    },
+    "deps": [
+      114
+    ],
+    "target": "src/lib.rs:2305:13"
+  },
+  {
+    "uid": 142,
+    "path": "<ThinVec<A> as std::cmp::PartialEq<&'a [B; 27]>>::eq",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2310,
+      "start_col": 13,
+      "end_line": 2310,
+      "end_col": 54
+    },
+    "deps": [
+      114
+    ],
+    "target": "src/lib.rs:2310:13"
+  },
+  {
+    "uid": 143,
+    "path": "<ThinVec<A> as std::cmp::PartialEq<[B; 27]>>::eq",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2305,
+      "start_col": 13,
+      "end_line": 2305,
+      "end_col": 50
+    },
+    "deps": [
+      114
+    ],
+    "target": "src/lib.rs:2305:13"
+  },
+  {
+    "uid": 144,
+    "path": "<ThinVec<A> as std::cmp::PartialEq<&'a [B; 26]>>::eq",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2310,
+      "start_col": 13,
+      "end_line": 2310,
+      "end_col": 54
+    },
+    "deps": [
+      114
+    ],
+    "target": "src/lib.rs:2310:13"
+  },
+  {
+    "uid": 145,
+    "path": "<ThinVec<A> as std::cmp::PartialEq<[B; 26]>>::eq",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2305,
+      "start_col": 13,
+      "end_line": 2305,
+      "end_col": 50
+    },
+    "deps": [
+      114
+    ],
+    "target": "src/lib.rs:2305:13"
+  },
+  {
+    "uid": 146,
+    "path": "<ThinVec<A> as std::cmp::PartialEq<&'a [B; 25]>>::eq",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2310,
+      "start_col": 13,
+      "end_line": 2310,
+      "end_col": 54
+    },
+    "deps": [
+      114
+    ],
+    "target": "src/lib.rs:2310:13"
+  },
+  {
+    "uid": 147,
+    "path": "<ThinVec<A> as std::cmp::PartialEq<[B; 25]>>::eq",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2305,
+      "start_col": 13,
+      "end_line": 2305,
+      "end_col": 50
+    },
+    "deps": [
+      114
+    ],
+    "target": "src/lib.rs:2305:13"
+  },
+  {
+    "uid": 148,
+    "path": "<ThinVec<A> as std::cmp::PartialEq<&'a [B; 24]>>::eq",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2310,
+      "start_col": 13,
+      "end_line": 2310,
+      "end_col": 54
+    },
+    "deps": [
+      114
+    ],
+    "target": "src/lib.rs:2310:13"
+  },
+  {
+    "uid": 149,
+    "path": "<ThinVec<A> as std::cmp::PartialEq<[B; 24]>>::eq",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2305,
+      "start_col": 13,
+      "end_line": 2305,
+      "end_col": 50
+    },
+    "deps": [
+      114
+    ],
+    "target": "src/lib.rs:2305:13"
+  },
+  {
+    "uid": 150,
+    "path": "<ThinVec<A> as std::cmp::PartialEq<&'a [B; 23]>>::eq",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2310,
+      "start_col": 13,
+      "end_line": 2310,
+      "end_col": 54
+    },
+    "deps": [
+      114
+    ],
+    "target": "src/lib.rs:2310:13"
+  },
+  {
+    "uid": 151,
+    "path": "<ThinVec<A> as std::cmp::PartialEq<[B; 23]>>::eq",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2305,
+      "start_col": 13,
+      "end_line": 2305,
+      "end_col": 50
+    },
+    "deps": [
+      114
+    ],
+    "target": "src/lib.rs:2305:13"
+  },
+  {
+    "uid": 152,
+    "path": "<ThinVec<A> as std::cmp::PartialEq<&'a [B; 22]>>::eq",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2310,
+      "start_col": 13,
+      "end_line": 2310,
+      "end_col": 54
+    },
+    "deps": [
+      114
+    ],
+    "target": "src/lib.rs:2310:13"
+  },
+  {
+    "uid": 153,
+    "path": "<ThinVec<A> as std::cmp::PartialEq<[B; 22]>>::eq",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2305,
+      "start_col": 13,
+      "end_line": 2305,
+      "end_col": 50
+    },
+    "deps": [
+      114
+    ],
+    "target": "src/lib.rs:2305:13"
+  },
+  {
+    "uid": 154,
+    "path": "<ThinVec<A> as std::cmp::PartialEq<&'a [B; 21]>>::eq",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2310,
+      "start_col": 13,
+      "end_line": 2310,
+      "end_col": 54
+    },
+    "deps": [
+      114
+    ],
+    "target": "src/lib.rs:2310:13"
+  },
+  {
+    "uid": 155,
+    "path": "<ThinVec<A> as std::cmp::PartialEq<[B; 21]>>::eq",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2305,
+      "start_col": 13,
+      "end_line": 2305,
+      "end_col": 50
+    },
+    "deps": [
+      114
+    ],
+    "target": "src/lib.rs:2305:13"
+  },
+  {
+    "uid": 156,
+    "path": "<ThinVec<A> as std::cmp::PartialEq<&'a [B; 20]>>::eq",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2310,
+      "start_col": 13,
+      "end_line": 2310,
+      "end_col": 54
+    },
+    "deps": [
+      114
+    ],
+    "target": "src/lib.rs:2310:13"
+  },
+  {
+    "uid": 157,
+    "path": "<ThinVec<A> as std::cmp::PartialEq<[B; 20]>>::eq",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2305,
+      "start_col": 13,
+      "end_line": 2305,
+      "end_col": 50
+    },
+    "deps": [
+      114
+    ],
+    "target": "src/lib.rs:2305:13"
+  },
+  {
+    "uid": 158,
+    "path": "<ThinVec<A> as std::cmp::PartialEq<&'a [B; 19]>>::eq",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2310,
+      "start_col": 13,
+      "end_line": 2310,
+      "end_col": 54
+    },
+    "deps": [
+      114
+    ],
+    "target": "src/lib.rs:2310:13"
+  },
+  {
+    "uid": 159,
+    "path": "<ThinVec<A> as std::cmp::PartialEq<[B; 19]>>::eq",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2305,
+      "start_col": 13,
+      "end_line": 2305,
+      "end_col": 50
+    },
+    "deps": [
+      114
+    ],
+    "target": "src/lib.rs:2305:13"
+  },
+  {
+    "uid": 160,
+    "path": "<ThinVec<A> as std::cmp::PartialEq<&'a [B; 18]>>::eq",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2310,
+      "start_col": 13,
+      "end_line": 2310,
+      "end_col": 54
+    },
+    "deps": [
+      114
+    ],
+    "target": "src/lib.rs:2310:13"
+  },
+  {
+    "uid": 161,
+    "path": "<ThinVec<A> as std::cmp::PartialEq<[B; 18]>>::eq",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2305,
+      "start_col": 13,
+      "end_line": 2305,
+      "end_col": 50
+    },
+    "deps": [
+      114
+    ],
+    "target": "src/lib.rs:2305:13"
+  },
+  {
+    "uid": 162,
+    "path": "<ThinVec<A> as std::cmp::PartialEq<&'a [B; 17]>>::eq",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2310,
+      "start_col": 13,
+      "end_line": 2310,
+      "end_col": 54
+    },
+    "deps": [
+      114
+    ],
+    "target": "src/lib.rs:2310:13"
+  },
+  {
+    "uid": 163,
+    "path": "<ThinVec<A> as std::cmp::PartialEq<[B; 17]>>::eq",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2305,
+      "start_col": 13,
+      "end_line": 2305,
+      "end_col": 50
+    },
+    "deps": [
+      114
+    ],
+    "target": "src/lib.rs:2305:13"
+  },
+  {
+    "uid": 164,
+    "path": "<ThinVec<A> as std::cmp::PartialEq<&'a [B; 16]>>::eq",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2310,
+      "start_col": 13,
+      "end_line": 2310,
+      "end_col": 54
+    },
+    "deps": [
+      114
+    ],
+    "target": "src/lib.rs:2310:13"
+  },
+  {
+    "uid": 165,
+    "path": "<ThinVec<A> as std::cmp::PartialEq<[B; 16]>>::eq",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2305,
+      "start_col": 13,
+      "end_line": 2305,
+      "end_col": 50
+    },
+    "deps": [
+      114
+    ],
+    "target": "src/lib.rs:2305:13"
+  },
+  {
+    "uid": 166,
+    "path": "<ThinVec<A> as std::cmp::PartialEq<&'a [B; 15]>>::eq",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2310,
+      "start_col": 13,
+      "end_line": 2310,
+      "end_col": 54
+    },
+    "deps": [
+      114
+    ],
+    "target": "src/lib.rs:2310:13"
+  },
+  {
+    "uid": 167,
+    "path": "<ThinVec<A> as std::cmp::PartialEq<[B; 15]>>::eq",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2305,
+      "start_col": 13,
+      "end_line": 2305,
+      "end_col": 50
+    },
+    "deps": [
+      114
+    ],
+    "target": "src/lib.rs:2305:13"
+  },
+  {
+    "uid": 168,
+    "path": "<ThinVec<A> as std::cmp::PartialEq<&'a [B; 14]>>::eq",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2310,
+      "start_col": 13,
+      "end_line": 2310,
+      "end_col": 54
+    },
+    "deps": [
+      114
+    ],
+    "target": "src/lib.rs:2310:13"
+  },
+  {
+    "uid": 169,
+    "path": "<ThinVec<A> as std::cmp::PartialEq<[B; 14]>>::eq",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2305,
+      "start_col": 13,
+      "end_line": 2305,
+      "end_col": 50
+    },
+    "deps": [
+      114
+    ],
+    "target": "src/lib.rs:2305:13"
+  },
+  {
+    "uid": 170,
+    "path": "<ThinVec<A> as std::cmp::PartialEq<&'a [B; 13]>>::eq",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2310,
+      "start_col": 13,
+      "end_line": 2310,
+      "end_col": 54
+    },
+    "deps": [
+      114
+    ],
+    "target": "src/lib.rs:2310:13"
+  },
+  {
+    "uid": 171,
+    "path": "<ThinVec<A> as std::cmp::PartialEq<[B; 13]>>::eq",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2305,
+      "start_col": 13,
+      "end_line": 2305,
+      "end_col": 50
+    },
+    "deps": [
+      114
+    ],
+    "target": "src/lib.rs:2305:13"
+  },
+  {
+    "uid": 172,
+    "path": "<ThinVec<A> as std::cmp::PartialEq<&'a [B; 12]>>::eq",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2310,
+      "start_col": 13,
+      "end_line": 2310,
+      "end_col": 54
+    },
+    "deps": [
+      114
+    ],
+    "target": "src/lib.rs:2310:13"
+  },
+  {
+    "uid": 173,
+    "path": "<ThinVec<A> as std::cmp::PartialEq<[B; 12]>>::eq",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2305,
+      "start_col": 13,
+      "end_line": 2305,
+      "end_col": 50
+    },
+    "deps": [
+      114
+    ],
+    "target": "src/lib.rs:2305:13"
+  },
+  {
+    "uid": 174,
+    "path": "<ThinVec<A> as std::cmp::PartialEq<&'a [B; 11]>>::eq",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2310,
+      "start_col": 13,
+      "end_line": 2310,
+      "end_col": 54
+    },
+    "deps": [
+      114
+    ],
+    "target": "src/lib.rs:2310:13"
+  },
+  {
+    "uid": 175,
+    "path": "<ThinVec<A> as std::cmp::PartialEq<[B; 11]>>::eq",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2305,
+      "start_col": 13,
+      "end_line": 2305,
+      "end_col": 50
+    },
+    "deps": [
+      114
+    ],
+    "target": "src/lib.rs:2305:13"
+  },
+  {
+    "uid": 176,
+    "path": "<ThinVec<A> as std::cmp::PartialEq<&'a [B; 10]>>::eq",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2310,
+      "start_col": 13,
+      "end_line": 2310,
+      "end_col": 54
+    },
+    "deps": [
+      114
+    ],
+    "target": "src/lib.rs:2310:13"
+  },
+  {
+    "uid": 177,
+    "path": "<ThinVec<A> as std::cmp::PartialEq<[B; 10]>>::eq",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2305,
+      "start_col": 13,
+      "end_line": 2305,
+      "end_col": 50
+    },
+    "deps": [
+      114
+    ],
+    "target": "src/lib.rs:2305:13"
+  },
+  {
+    "uid": 178,
+    "path": "<ThinVec<A> as std::cmp::PartialEq<&'a [B; 9]>>::eq",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2310,
+      "start_col": 13,
+      "end_line": 2310,
+      "end_col": 54
+    },
+    "deps": [
+      114
+    ],
+    "target": "src/lib.rs:2310:13"
+  },
+  {
+    "uid": 179,
+    "path": "<ThinVec<A> as std::cmp::PartialEq<[B; 9]>>::eq",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2305,
+      "start_col": 13,
+      "end_line": 2305,
+      "end_col": 50
+    },
+    "deps": [
+      114
+    ],
+    "target": "src/lib.rs:2305:13"
+  },
+  {
+    "uid": 180,
+    "path": "<ThinVec<A> as std::cmp::PartialEq<&'a [B; 8]>>::eq",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2310,
+      "start_col": 13,
+      "end_line": 2310,
+      "end_col": 54
+    },
+    "deps": [
+      114
+    ],
+    "target": "src/lib.rs:2310:13"
+  },
+  {
+    "uid": 181,
+    "path": "<ThinVec<A> as std::cmp::PartialEq<[B; 8]>>::eq",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2305,
+      "start_col": 13,
+      "end_line": 2305,
+      "end_col": 50
+    },
+    "deps": [
+      114
+    ],
+    "target": "src/lib.rs:2305:13"
+  },
+  {
+    "uid": 182,
+    "path": "<ThinVec<A> as std::cmp::PartialEq<&'a [B; 7]>>::eq",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2310,
+      "start_col": 13,
+      "end_line": 2310,
+      "end_col": 54
+    },
+    "deps": [
+      114
+    ],
+    "target": "src/lib.rs:2310:13"
+  },
+  {
+    "uid": 183,
+    "path": "<ThinVec<A> as std::cmp::PartialEq<[B; 7]>>::eq",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2305,
+      "start_col": 13,
+      "end_line": 2305,
+      "end_col": 50
+    },
+    "deps": [
+      114
+    ],
+    "target": "src/lib.rs:2305:13"
+  },
+  {
+    "uid": 184,
+    "path": "<ThinVec<A> as std::cmp::PartialEq<&'a [B; 6]>>::eq",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2310,
+      "start_col": 13,
+      "end_line": 2310,
+      "end_col": 54
+    },
+    "deps": [
+      114
+    ],
+    "target": "src/lib.rs:2310:13"
+  },
+  {
+    "uid": 185,
+    "path": "<ThinVec<A> as std::cmp::PartialEq<[B; 6]>>::eq",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2305,
+      "start_col": 13,
+      "end_line": 2305,
+      "end_col": 50
+    },
+    "deps": [
+      114
+    ],
+    "target": "src/lib.rs:2305:13"
+  },
+  {
+    "uid": 186,
+    "path": "<ThinVec<A> as std::cmp::PartialEq<&'a [B; 5]>>::eq",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2310,
+      "start_col": 13,
+      "end_line": 2310,
+      "end_col": 54
+    },
+    "deps": [
+      114
+    ],
+    "target": "src/lib.rs:2310:13"
+  },
+  {
+    "uid": 187,
+    "path": "<ThinVec<A> as std::cmp::PartialEq<[B; 5]>>::eq",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2305,
+      "start_col": 13,
+      "end_line": 2305,
+      "end_col": 50
+    },
+    "deps": [
+      114
+    ],
+    "target": "src/lib.rs:2305:13"
+  },
+  {
+    "uid": 188,
+    "path": "<ThinVec<A> as std::cmp::PartialEq<&'a [B; 4]>>::eq",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2310,
+      "start_col": 13,
+      "end_line": 2310,
+      "end_col": 54
+    },
+    "deps": [
+      114
+    ],
+    "target": "src/lib.rs:2310:13"
+  },
+  {
+    "uid": 189,
+    "path": "<ThinVec<A> as std::cmp::PartialEq<[B; 4]>>::eq",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2305,
+      "start_col": 13,
+      "end_line": 2305,
+      "end_col": 50
+    },
+    "deps": [
+      114
+    ],
+    "target": "src/lib.rs:2305:13"
+  },
+  {
+    "uid": 190,
+    "path": "<ThinVec<A> as std::cmp::PartialEq<&'a [B; 3]>>::eq",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2310,
+      "start_col": 13,
+      "end_line": 2310,
+      "end_col": 54
+    },
+    "deps": [
+      114
+    ],
+    "target": "src/lib.rs:2310:13"
+  },
+  {
+    "uid": 191,
+    "path": "<ThinVec<A> as std::cmp::PartialEq<[B; 3]>>::eq",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2305,
+      "start_col": 13,
+      "end_line": 2305,
+      "end_col": 50
+    },
+    "deps": [
+      114
+    ],
+    "target": "src/lib.rs:2305:13"
+  },
+  {
+    "uid": 192,
+    "path": "<ThinVec<A> as std::cmp::PartialEq<&'a [B; 2]>>::eq",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2310,
+      "start_col": 13,
+      "end_line": 2310,
+      "end_col": 54
+    },
+    "deps": [
+      114
+    ],
+    "target": "src/lib.rs:2310:13"
+  },
+  {
+    "uid": 193,
+    "path": "<ThinVec<A> as std::cmp::PartialEq<[B; 2]>>::eq",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2305,
+      "start_col": 13,
+      "end_line": 2305,
+      "end_col": 50
+    },
+    "deps": [
+      114
+    ],
+    "target": "src/lib.rs:2305:13"
+  },
+  {
+    "uid": 194,
+    "path": "<ThinVec<A> as std::cmp::PartialEq<&'a [B; 1]>>::eq",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2310,
+      "start_col": 13,
+      "end_line": 2310,
+      "end_col": 54
+    },
+    "deps": [
+      114
+    ],
+    "target": "src/lib.rs:2310:13"
+  },
+  {
+    "uid": 195,
+    "path": "<ThinVec<A> as std::cmp::PartialEq<[B; 1]>>::eq",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2305,
+      "start_col": 13,
+      "end_line": 2305,
+      "end_col": 50
+    },
+    "deps": [
+      114
+    ],
+    "target": "src/lib.rs:2305:13"
+  },
+  {
+    "uid": 196,
+    "path": "<ThinVec<A> as std::cmp::PartialEq<&'a [B; 0]>>::eq",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2310,
+      "start_col": 13,
+      "end_line": 2310,
+      "end_col": 54
+    },
+    "deps": [
+      114
+    ],
+    "target": "src/lib.rs:2310:13"
+  },
+  {
+    "uid": 197,
+    "path": "<ThinVec<A> as std::cmp::PartialEq<[B; 0]>>::eq",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2305,
+      "start_col": 13,
+      "end_line": 2305,
+      "end_col": 50
+    },
+    "deps": [
+      114
+    ],
+    "target": "src/lib.rs:2305:13"
+  },
+  {
+    "uid": 198,
+    "path": "<ThinVec<A> as std::cmp::PartialEq<&'a [B]>>::eq",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2222,
+      "start_col": 5,
+      "end_line": 2222,
+      "end_col": 42
+    },
+    "deps": [
+      114
+    ],
+    "target": "src/lib.rs:2222:5"
+  },
+  {
+    "uid": 199,
+    "path": "<ThinVec<A> as std::cmp::PartialEq<[B]>>::eq",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2212,
+      "start_col": 5,
+      "end_line": 2212,
+      "end_col": 38
+    },
+    "deps": [
+      114
+    ],
+    "target": "src/lib.rs:2212:5"
+  },
+  {
+    "uid": 200,
+    "path": "<ThinVec<A> as std::cmp::PartialEq<std::vec::Vec<B>>>::eq",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2202,
+      "start_col": 5,
+      "end_line": 2202,
+      "end_col": 41
+    },
+    "deps": [
+      114
+    ],
+    "target": "src/lib.rs:2202:5"
+  },
+  {
+    "uid": 201,
+    "path": "<ThinVec<A> as std::cmp::PartialEq<ThinVec<B>>>::eq",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2192,
+      "start_col": 5,
+      "end_line": 2192,
+      "end_col": 45
+    },
+    "deps": [
+      114
+    ],
+    "target": "src/lib.rs:2192:5"
+  },
+  {
+    "uid": 202,
+    "path": "<ThinVec<T> as std::cmp::Ord>::cmp",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2182,
+      "start_col": 5,
+      "end_line": 2182,
+      "end_col": 50
+    },
+    "deps": [
+      114
+    ],
+    "target": "src/lib.rs:2182:5"
+  },
+  {
+    "uid": 203,
+    "path": "<ThinVec<T> as std::cmp::PartialOrd>::partial_cmp",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2172,
+      "start_col": 5,
+      "end_line": 2172,
+      "end_col": 66
+    },
+    "deps": [
+      114
+    ],
+    "target": "src/lib.rs:2172:5"
+  },
+  {
+    "uid": 204,
+    "path": "<ThinVec<T> as std::hash::Hash>::hash",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2159,
+      "start_col": 5,
+      "end_line": 2161,
+      "end_col": 19
+    },
+    "deps": [
+      114
+    ],
+    "target": "src/lib.rs:2159:5"
+  },
+  {
+    "uid": 205,
+    "path": "<IntoIter<T> as std::ops::Drop>::drop::drop_non_singleton",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2702,
+      "start_col": 9,
+      "end_line": 2702,
+      "end_col": 57
+    },
+    "deps": [
+      117
+    ],
+    "target": "src/lib.rs:2702:9"
+  },
+  {
+    "uid": 206,
+    "path": "drop_non_singleton",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2029,
+      "start_col": 1,
+      "end_line": 2029,
+      "end_col": 48
+    },
+    "deps": [
+      37,
+      92,
+      64,
+      18,
+      117
+    ],
+    "target": "src/lib.rs:2029:1"
+  },
+  {
+    "uid": 207,
+    "path": "ThinVec::<T>::retain_mut",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 1425,
+      "start_col": 5,
+      "end_line": 1427,
+      "end_col": 34
+    },
+    "deps": [
+      63,
+      117,
+      111
+    ],
+    "target": "src/lib.rs:1425:5"
+  },
+  {
+    "uid": 208,
+    "path": "ThinVec::<T>::clear",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 1170,
+      "start_col": 5,
+      "end_line": 1170,
+      "end_col": 28
+    },
+    "deps": [
+      117
+    ],
+    "target": "src/lib.rs:1170:5"
+  },
+  {
+    "uid": 209,
+    "path": "ThinVec::<T>::reserve",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 1227,
+      "start_col": 5,
+      "end_line": 1227,
+      "end_col": 49
+    },
+    "deps": [
+      12,
+      72,
+      73,
+      120,
+      15,
+      53
+    ],
+    "target": "src/lib.rs:1227:5"
+  },
+  {
+    "uid": 210,
+    "path": "ThinVec::<T>::reserve",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 1227,
+      "start_col": 5,
+      "end_line": 1227,
+      "end_col": 49
+    },
+    "deps": [
+      1,
+      63,
+      15,
+      53,
+      122,
+      64
+    ],
+    "target": "src/lib.rs:1227:5"
+  },
+  {
+    "uid": 211,
+    "path": "ThinVec::<T>::shrink_to_fit",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 1343,
+      "start_col": 5,
+      "end_line": 1343,
+      "end_col": 36
+    },
+    "deps": [
+      1,
+      63,
+      122,
+      64,
+      69
+    ],
+    "target": "src/lib.rs:1343:5"
+  },
+  {
+    "uid": 212,
+    "path": "ThinVec::<T>::reserve_exact",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 1313,
+      "start_col": 5,
+      "end_line": 1313,
+      "end_col": 55
+    },
+    "deps": [
+      1,
+      63,
+      15,
+      53,
+      122,
+      64
+    ],
+    "target": "src/lib.rs:1313:5"
+  },
+  {
+    "uid": 213,
+    "path": "<ThinVec<T> as std::clone::Clone>::clone::clone_non_singleton",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2362,
+      "start_col": 9,
+      "end_line": 2362,
+      "end_col": 74
+    },
+    "deps": [
+      68,
+      63,
+      106,
+      94,
+      123
+    ],
+    "target": "src/lib.rs:2362:9"
+  },
+  {
+    "uid": 214,
+    "path": "ThinVec::<T>::split_off",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 1549,
+      "start_col": 5,
+      "end_line": 1549,
+      "end_col": 57
+    },
+    "deps": [
+      68,
+      63,
+      106,
+      123
+    ],
+    "target": "src/lib.rs:1549:5"
+  },
+  {
+    "uid": 215,
+    "path": "ThinVec::<T>::splice",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 1690,
+      "start_col": 5,
+      "end_line": 1693,
+      "end_col": 35
+    },
+    "deps": [
+      128
+    ],
+    "target": "src/lib.rs:1690:5"
+  },
+  {
+    "uid": 216,
+    "path": "ThinVec::<T>::dedup",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2022,
+      "start_col": 5,
+      "end_line": 2022,
+      "end_col": 28
+    },
+    "deps": [
+      131
+    ],
+    "target": "src/lib.rs:2022:5"
+  },
+  {
+    "uid": 217,
+    "path": "ThinVec::<T>::dedup_by_key",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 1465,
+      "start_col": 5,
+      "end_line": 1468,
+      "end_col": 25
+    },
+    "deps": [
+      131
+    ],
+    "target": "src/lib.rs:1465:5"
+  },
+  {
+    "uid": 218,
+    "path": "<IntoIter<T> as std::ops::Drop>::drop",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2699,
+      "start_col": 5,
+      "end_line": 2699,
+      "end_col": 23
+    },
+    "deps": [
+      38,
+      205
+    ],
+    "target": "src/lib.rs:2699:5"
+  },
+  {
+    "uid": 219,
+    "path": "drop_thin_vec",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2046,
+      "start_col": 1,
+      "end_line": 2046,
+      "end_col": 50
+    },
+    "deps": [
+      1,
+      38,
+      117,
+      206
+    ],
+    "target": "src/lib.rs:2046:1"
+  },
+  {
+    "uid": 220,
+    "path": "ThinVec::<T>::retain",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 1397,
+      "start_col": 5,
+      "end_line": 1399,
+      "end_col": 30
+    },
+    "deps": [
+      207
+    ],
+    "target": "src/lib.rs:1397:5"
+  },
+  {
+    "uid": 221,
+    "path": "ThinVec::<T>::push",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 932,
+      "start_col": 5,
+      "end_line": 932,
+      "end_col": 35
+    },
+    "deps": [
+      119,
+      72,
+      73,
+      209
+    ],
+    "target": "src/lib.rs:932:5"
+  },
+  {
+    "uid": 222,
+    "path": "Drain::<'_, T>::move_tail",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 3132,
+      "start_col": 5,
+      "end_line": 3132,
+      "end_col": 54
+    },
+    "deps": [
+      68,
+      53,
+      210
+    ],
+    "target": "src/lib.rs:3132:5"
+  },
+  {
+    "uid": 223,
+    "path": "ThinVec::<T>::push",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 932,
+      "start_col": 5,
+      "end_line": 932,
+      "end_col": 35
+    },
+    "deps": [
+      63,
+      210,
+      64,
+      107
+    ],
+    "target": "src/lib.rs:932:5"
+  },
+  {
+    "uid": 224,
+    "path": "ThinVec::<T>::insert",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 1003,
+      "start_col": 5,
+      "end_line": 1003,
+      "end_col": 50
+    },
+    "deps": [
+      68,
+      63,
+      82,
+      210,
+      64
+    ],
+    "target": "src/lib.rs:1003:5"
+  },
+  {
+    "uid": 225,
+    "path": "<ThinVec<T> as std::clone::Clone>::clone",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2359,
+      "start_col": 5,
+      "end_line": 2359,
+      "end_col": 34
+    },
+    "deps": [
+      38,
+      69,
+      213
+    ],
+    "target": "src/lib.rs:2359:5"
+  },
+  {
+    "uid": 226,
+    "path": "<ThinVec<T> as std::ops::Drop>::drop",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2059,
+      "start_col": 5,
+      "end_line": 2059,
+      "end_col": 23
+    },
+    "deps": [
+      219
+    ],
+    "target": "src/lib.rs:2059:5"
+  },
+  {
+    "uid": 227,
+    "path": "<ThinVec<T> as std::iter::Extend<T>>::extend",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2124,
+      "start_col": 5,
+      "end_line": 2126,
+      "end_col": 35
+    },
+    "deps": [
+      221,
+      119,
+      209
+    ],
+    "target": "src/lib.rs:2124:5"
+  },
+  {
+    "uid": 228,
+    "path": "<ThinVec<T> as std::iter::Extend<T>>::extend",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2124,
+      "start_col": 5,
+      "end_line": 2126,
+      "end_col": 35
+    },
+    "deps": [
+      210,
+      223,
+      107
+    ],
+    "target": "src/lib.rs:2124:5"
+  },
+  {
+    "uid": 229,
+    "path": "ThinVec::<T>::resize",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 1959,
+      "start_col": 5,
+      "end_line": 1959,
+      "end_col": 55
+    },
+    "deps": [
+      63,
+      210,
+      223,
+      111
+    ],
+    "target": "src/lib.rs:1959:5"
+  },
+  {
+    "uid": 230,
+    "path": "ThinVec::<T>::extend_from_slice",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 1998,
+      "start_col": 5,
+      "end_line": 1998,
+      "end_col": 53
+    },
+    "deps": [
+      227
+    ],
+    "target": "src/lib.rs:1998:5"
+  },
+  {
+    "uid": 231,
+    "path": "<ThinVec<T> as std::iter::FromIterator<T>>::from_iter",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2396,
+      "start_col": 5,
+      "end_line": 2396,
+      "end_col": 67
+    },
+    "deps": [
+      227,
+      121
+    ],
+    "target": "src/lib.rs:2396:5"
+  },
+  {
+    "uid": 232,
+    "path": "<Splice<'_, I> as std::ops::Drop>::drop",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2966,
+      "start_col": 5,
+      "end_line": 2966,
+      "end_col": 23
+    },
+    "deps": [
+      222,
+      126,
+      228
+    ],
+    "target": "src/lib.rs:2966:5"
+  },
+  {
+    "uid": 233,
+    "path": "<ThinVec<T> as std::iter::FromIterator<T>>::from_iter",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 2396,
+      "start_col": 5,
+      "end_line": 2396,
+      "end_col": 67
+    },
+    "deps": [
+      228,
+      123
+    ],
+    "target": "src/lib.rs:2396:5"
+  },
+  {
+    "uid": 234,
+    "path": "ThinVec::<T>::extend_from_slice",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 1998,
+      "start_col": 5,
+      "end_line": 1998,
+      "end_col": 53
+    },
+    "deps": [
+      228
+    ],
+    "target": "src/lib.rs:1998:5"
+  },
+  {
+    "uid": 235,
+    "path": "ThinVec::<T>::append",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 1584,
+      "start_col": 5,
+      "end_line": 1584,
+      "end_col": 53
+    },
+    "deps": [
+      228,
+      128
+    ],
+    "target": "src/lib.rs:1584:5"
+  },
+  {
+    "uid": 236,
+    "path": "<ThinVec<u8> as std::io::Write>::write_all",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 3234,
+      "start_col": 5,
+      "end_line": 3234,
+      "end_col": 63
+    },
+    "deps": [
+      230
+    ],
+    "target": "src/lib.rs:3234:5"
+  },
+  {
+    "uid": 237,
+    "path": "<ThinVec<u8> as std::io::Write>::write",
+    "span": {
+      "file": "/Users/kristofergaudel/Desktop/Code/centrifuge/crates/thin-vec/src/lib.rs",
+      "start_line": 3228,
+      "start_col": 5,
+      "end_line": 3228,
+      "end_col": 62
+    },
+    "deps": [
+      230
+    ],
+    "target": "src/lib.rs:3228:5"
+  }
+]
