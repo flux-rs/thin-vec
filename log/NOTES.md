@@ -8,6 +8,21 @@ Target: `mozilla/thin-vec` main `326a226` (0.2.21), vendored with
 See also: `ABORT.md` (every remaining error), `FLUX_ISSUES.md` (ICEs and flux
 problems, existing vs novel), `BUGS.md` (thin-vec bugs).
 
+## Score (2026-10-28)
+
+`cargo flux` is clean: **199 functions processed: 171 checked; 29 trusted**.
+
+| trusted reason | functions |
+|---|---:|
+| `ICE:` | 5 (+ 5 `trusted_impl` on their impls) |
+| `ABORT:` | 23 |
+| `BUG:` | 1 (`insert`, BUGS.md bug 1) |
+
+The 24 ABORT/BUG functions are exactly the ones that held the 100 errors below;
+each `reason` cites its `ABORT.md` section. `drain` (BUGS.md bug 2) is
+`ABORT:`, not `BUG:`: flux doesn't flag its `+ 1` overflow, and its 7 errors are
+the slice-accessor obligation.
+
 ## Result (2026-10-18)
 
 | | |

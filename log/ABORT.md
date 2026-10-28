@@ -1,7 +1,8 @@
 # ABORT log — thin-vec
 
 Every refinement error left in the full sweep (**100 errors in 24 functions,
-0 ICEs**). Each entry lists the strategies tried, in harness order: 1
+0 ICEs**). Each of the 24 functions is now `#[flux_rs::trusted(reason = "ABORT:
+… (ABORT.md §n)")]` (`insert`: `"BUG: …"`), so `cargo flux` is clean. Each entry lists the strategies tried, in harness order: 1
 precondition on this function, 2 `refined_by` on an upstream struct, 3
 intermediate callee spec. Uids are from `log/targets.json` (the call-graph dump
 lists some defs twice; the first uid is given). Line numbers are this

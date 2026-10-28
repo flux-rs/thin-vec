@@ -468,6 +468,7 @@ fn layout<T>(cap: usize) -> Layout {
 /// # Panics
 ///
 /// Panics if the required size overflows `isize::MAX` when rounded up to the required alignment.
+#[flux_rs::trusted(reason = "ABORT: no spec for alloc::alloc::alloc; alloc_size isize arithmetic needs T::size_of() >= 0 (ABORT.md §4)")]
 fn header_with_capacity<T>(cap: usize, is_auto: bool) -> NonNull<Header> {
     debug_assert!(cap > 0);
     unsafe {
@@ -683,6 +684,7 @@ impl<T> ThinVec<T> {
         unsafe { self.ptr.as_ref() }
     }
 
+    #[flux_rs::trusted(reason = "ABORT: element pointer carries no allocation size; len/cap live behind the header pointer (ABORT.md §2)")]
     fn data_raw(&self) -> *mut T {
         if Self::is_zst() {
             return ptr::dangling_mut();
@@ -751,6 +753,7 @@ impl<T> ThinVec<T> {
     /// let a = thin_vec![1, 2, 3];
     /// assert_eq!(a.len(), 3);
     /// ```
+    #[flux_rs::trusted(reason = "ABORT: ZST len is ptr addr - 1; flux doesn't know pointer addr >= 0 (ABORT.md §4, FLUX_ISSUES #3)")]
     pub fn len(&self) -> usize {
         if Self::is_zst() {
             (self.ptr.as_ptr() as usize) - 1
@@ -909,6 +912,7 @@ impl<T> ThinVec<T> {
     /// # Safety
     /// This is unsafe when the header is EMPTY_HEADER or when T is a ZST.
     #[inline]
+    #[flux_rs::trusted(reason = "ABORT: Header::set_len needs len <= cap of a fresh header read; caller protocol (ABORT.md §3)")]
     unsafe fn set_header_len(&mut self, len: usize) {
         unsafe { self.header_mut().set_len(len) }
     }
@@ -962,6 +966,7 @@ impl<T> ThinVec<T> {
     ///
     /// - Capacity must be reserved in advance such that `capacity() > len()`.
     #[inline]
+    #[flux_rs::trusted(reason = "ABORT: write into spare capacity needs allocation size == alloc_size(cap) (ABORT.md §1)")]
     unsafe fn push_unchecked(&mut self, val: T) {
         let old_len = self.len();
         debug_assert!(old_len < self.capacity());
@@ -984,6 +989,7 @@ impl<T> ThinVec<T> {
     /// assert_eq!(vec.pop(), Some(3));
     /// assert_eq!(vec, [1, 2]);
     /// ```
+    #[flux_rs::trusted(reason = "ABORT: needs T::size_of() >= 0, but trait-impl caller next_back can't carry the precondition (ABORT.md §3)")]
     pub fn pop(&mut self) -> Option<T> {
         // CENTRIFUGE: pointer and length come from one `as_mut_slice()` (was
         // `self.len()` + `self.data_raw()`), so flux can bound the offsets.
@@ -1018,6 +1024,7 @@ impl<T> ThinVec<T> {
     /// vec.insert(4, 5);
     /// assert_eq!(vec, [1, 4, 2, 3, 5]);
     /// ```
+    #[flux_rs::trusted(reason = "BUG: ThinVec<ZST>::insert writes through the len-encoded pointer, segfault from safe code (BUGS.md bug 1); also write past len into spare capacity (ABORT.md §1)")]
     pub fn insert(&mut self, idx: usize, elem: T) {
         let old_len = self.len();
 
@@ -1167,6 +1174,7 @@ impl<T> ThinVec<T> {
     ///
     /// [`clear`]: ThinVec::clear
     /// [`drain`]: ThinVec::drain
+    #[flux_rs::trusted(reason = "ABORT: repeated header reads of len per iteration (ABORT.md §3)")]
     pub fn truncate(&mut self, len: usize) {
         unsafe {
             // drop any extra elements
@@ -1224,6 +1232,7 @@ impl<T> ThinVec<T> {
     /// let buffer = thin_vec![1, 2, 3, 5, 8];
     /// io::sink().write(buffer.as_slice()).unwrap();
     /// ```
+    #[flux_rs::trusted(reason = "ABORT: data_raw() not known valid for len elements (ABORT.md §2)")]
     pub fn as_slice(&self) -> &[T] {
         unsafe { slice::from_raw_parts(self.data_raw(), self.len()) }
     }
@@ -1240,6 +1249,7 @@ impl<T> ThinVec<T> {
     /// let mut buffer = vec![0; 3];
     /// io::repeat(0b101).read_exact(buffer.as_mut_slice()).unwrap();
     /// ```
+    #[flux_rs::trusted(reason = "ABORT: data_raw() not known valid for len elements (ABORT.md §2)")]
     pub fn as_mut_slice(&mut self) -> &mut [T] {
         unsafe { slice::from_raw_parts_mut(self.data_raw(), self.len()) }
     }
@@ -1584,6 +1594,7 @@ impl<T> ThinVec<T> {
     /// assert_eq!(vec, [1]);
     /// assert_eq!(vec2, [2, 3]);
     /// ```
+    #[flux_rs::trusted(reason = "ABORT: copy into the new vec's spare capacity needs allocation size == alloc_size(cap) (ABORT.md §1)")]
     pub fn split_off(&mut self, at: usize) -> ThinVec<T> {
         let old_len = self.len();
         // CENTRIFUGE: the bounds check now comes before the subtraction it guards
@@ -1656,6 +1667,7 @@ impl<T> ThinVec<T> {
     /// v.drain(..);
     /// assert_eq!(v, &[]);
     /// ```
+    #[flux_rs::trusted(reason = "ABORT: from_raw_parts over data_raw().add(start) not known valid (ABORT.md §2); separately has the unflagged range-bound overflow of BUGS.md bug 2")]
     pub fn drain<R>(&mut self, range: R) -> Drain<'_, T>
     where
         R: RangeBounds<usize>,
@@ -1878,6 +1890,7 @@ impl<T> ThinVec<T> {
     /// # Safety
     ///
     /// Must not be called if Self::is_zst()
+    #[flux_rs::trusted(reason = "ABORT: set_cap_and_auto needs the realloc'ed header's len <= new_cap; caller protocol (ABORT.md §3)")]
     unsafe fn reallocate(&mut self, new_cap: usize) {
         debug_assert!(new_cap > 0);
         debug_assert!(!Self::is_zst());
@@ -2133,12 +2146,14 @@ impl<T> DerefMut for ThinVec<T> {
 impl<T, I: SliceIndex<[T]>> Index<I> for ThinVec<T> {
     type Output = <I as SliceIndex<[T]>>::Output;
 
+    #[flux_rs::trusted(reason = "ABORT: generic I: SliceIndex<[T]> bounds check can't be discharged (ABORT.md §4)")]
     fn index(&self, index: I) -> &Self::Output {
         &self.deref()[index]
     }
 }
 
 impl<T, I: SliceIndex<[T]>> IndexMut<I> for ThinVec<T> {
+    #[flux_rs::trusted(reason = "ABORT: generic I: SliceIndex<[T]> bounds check can't be discharged (ABORT.md §4)")]
     fn index_mut(&mut self, index: I) -> &mut Self::Output {
         &mut self.deref_mut()[index]
     }
@@ -2402,6 +2417,7 @@ where
     fn clone(&self) -> ThinVec<T> {
         #[cold]
         #[inline(never)]
+        #[flux_rs::trusted(reason = "ABORT: writes into a fresh with_capacity(len) allocation need size == alloc_size(cap) (ABORT.md §1)")]
         fn clone_non_singleton<T: Clone>(this: &ThinVec<T>) -> ThinVec<T> {
             let len = this.len();
             let mut new_vec = ThinVec::<T>::with_capacity(len);
@@ -2579,7 +2595,7 @@ impl From<&str> for ThinVec<u8> {
     }
 }
 
-#[flux_rs::trusted_impl(reason = "CENTRIFUGE: flux ICE (flux-rs/flux#1800)")]
+#[flux_rs::trusted_impl(reason = "ICE: (flux-rs/flux#1800)")]
 impl<T, const N: usize> TryFrom<ThinVec<T>> for [T; N] {
     type Error = ThinVec<T>;
 
@@ -2618,7 +2634,7 @@ impl<T, const N: usize> TryFrom<ThinVec<T>> for [T; N] {
     /// assert_eq!(a, b' ');
     /// assert_eq!(b, b'd');
     /// ```
-    #[flux_rs::trusted(reason = "CENTRIFUGE: flux ICE TooGeneric at builtin_assoc_refts.rs:135 (flux-rs/flux#1800)")]
+    #[flux_rs::trusted(reason = "ICE: TooGeneric at builtin_assoc_refts.rs:135 (flux-rs/flux#1800)")]
     fn try_from(mut vec: ThinVec<T>) -> Result<[T; N], ThinVec<T>> {
         if vec.len() != N {
             return Err(vec);
@@ -2669,6 +2685,7 @@ impl<T> IntoIter<T> {
     /// let _ = into_iter.next().unwrap();
     /// assert_eq!(into_iter.as_slice(), &['b', 'c']);
     /// ```
+    #[flux_rs::trusted(reason = "ABORT: data_raw().add(start) not known valid; vec len is behind the header pointer (ABORT.md §2)")]
     pub fn as_slice(&self) -> &[T] {
         unsafe { slice::from_raw_parts(self.vec.data_raw().add(self.start), self.len()) }
     }
@@ -2692,15 +2709,16 @@ impl<T> IntoIter<T> {
         unsafe { &mut *self.as_raw_mut_slice() }
     }
 
+    #[flux_rs::trusted(reason = "ABORT: data_raw() not known valid for len elements (ABORT.md §2)")]
     fn as_raw_mut_slice(&mut self) -> *mut [T] {
         unsafe { ptr::slice_from_raw_parts_mut(self.vec.data_raw().add(self.start), self.len()) }
     }
 }
 
-#[flux_rs::trusted_impl(reason = "CENTRIFUGE: flux ICE infer.rs:937 on unannotated Iterator::next (flux-rs/flux#1821)")]
+#[flux_rs::trusted_impl(reason = "ICE: infer.rs:937 on unannotated Iterator::next (flux-rs/flux#1821)")]
 impl<T> Iterator for IntoIter<T> {
     type Item = T;
-    #[flux_rs::trusted(reason = "CENTRIFUGE: flux ICE infer.rs:937 incompatible types `&strg Self` vs `&mut Self` on unannotated Iterator::next (flux-rs/flux#1821)")]
+    #[flux_rs::trusted(reason = "ICE: infer.rs:937 incompatible types `&strg Self` vs `&mut Self` on unannotated Iterator::next (flux-rs/flux#1821)")]
     fn next(&mut self) -> Option<T> {
         if self.start == self.vec.len() {
             None
@@ -2713,6 +2731,7 @@ impl<T> Iterator for IntoIter<T> {
         }
     }
 
+    #[flux_rs::trusted(reason = "ABORT: start <= vec.len() relates a field to heap memory (ABORT.md §3)")]
     fn size_hint(&self) -> (usize, Option<usize>) {
         let len = self.vec.len() - self.start;
         (len, Some(len))
@@ -2881,10 +2900,10 @@ pub struct Drain<'a, T> {
     tail: usize,
 }
 
-#[flux_rs::trusted_impl(reason = "CENTRIFUGE: flux ICE infer.rs:937 on unannotated Iterator::next (flux-rs/flux#1821)")]
+#[flux_rs::trusted_impl(reason = "ICE: infer.rs:937 on unannotated Iterator::next (flux-rs/flux#1821)")]
 impl<'a, T> Iterator for Drain<'a, T> {
     type Item = T;
-    #[flux_rs::trusted(reason = "CENTRIFUGE: flux ICE infer.rs:937 incompatible types `&strg Self` vs `&mut Self` on unannotated Iterator::next (flux-rs/flux#1821)")]
+    #[flux_rs::trusted(reason = "ICE: infer.rs:937 incompatible types `&strg Self` vs `&mut Self` on unannotated Iterator::next (flux-rs/flux#1821)")]
     fn next(&mut self) -> Option<T> {
         self.iter.next().map(|x| unsafe { ptr::read(x) })
     }
@@ -2895,6 +2914,7 @@ impl<'a, T> Iterator for Drain<'a, T> {
 }
 
 impl<'a, T> DoubleEndedIterator for Drain<'a, T> {
+    #[flux_rs::trusted(reason = "ABORT: ptr::read from slice iterator ref needs T::size_of() >= 0, trait impl can't take a precondition (ABORT.md §4, FLUX_ISSUES #1)")]
     fn next_back(&mut self) -> Option<T> {
         self.iter.next_back().map(|x| unsafe { ptr::read(x) })
     }
@@ -2909,6 +2929,7 @@ unsafe impl<T> core::iter::TrustedLen for Drain<'_, T> {}
 impl<T> core::iter::FusedIterator for Drain<'_, T> {}
 
 impl<'a, T> Drop for Drain<'a, T> {
+    #[flux_rs::trusted(reason = "ABORT: tail copy beyond the current len needs allocation size == alloc_size(cap) (ABORT.md §1)")]
     fn drop(&mut self) {
         // Consume the rest of the iterator.
         for _ in self.by_ref() {}
@@ -2983,11 +3004,11 @@ pub struct Splice<'a, I: Iterator + 'a> {
     replace_with: I,
 }
 
-#[flux_rs::trusted_impl(reason = "CENTRIFUGE: flux ICE infer.rs:937 on unannotated Iterator::next (flux-rs/flux#1821)")]
+#[flux_rs::trusted_impl(reason = "ICE: infer.rs:937 on unannotated Iterator::next (flux-rs/flux#1821)")]
 impl<I: Iterator> Iterator for Splice<'_, I> {
     type Item = I::Item;
 
-    #[flux_rs::trusted(reason = "CENTRIFUGE: flux ICE infer.rs:937 incompatible types `&strg Self` vs `&mut Self` on unannotated Iterator::next (flux-rs/flux#1821)")]
+    #[flux_rs::trusted(reason = "ICE: infer.rs:937 incompatible types `&strg Self` vs `&mut Self` on unannotated Iterator::next (flux-rs/flux#1821)")]
     fn next(&mut self) -> Option<Self::Item> {
         self.drain.next()
     }
@@ -3151,6 +3172,7 @@ impl<T> Drain<'_, T> {
     /// that have been moved out.
     /// Fill that range as much as possible with new elements from the `replace_with` iterator.
     /// Returns `true` if we filled the entire range. (`replace_with.next()` didn’t return `None`.)
+    #[flux_rs::trusted(reason = "ABORT: from_raw_parts_mut over the drained hole; end - len from separate header reads (ABORT.md §1)")]
     unsafe fn fill<I: Iterator<Item = T>>(&mut self, replace_with: &mut I) -> bool {
         let vec = unsafe { self.vec.as_mut() };
         let range_start = vec.len();
@@ -3172,6 +3194,7 @@ impl<T> Drain<'_, T> {
     }
 
     /// Makes room for inserting more elements before the tail.
+    #[flux_rs::trusted(reason = "ABORT: tail copy into newly reserved space needs allocation size == alloc_size(cap) (ABORT.md §1)")]
     unsafe fn move_tail(&mut self, additional: usize) {
         let vec = unsafe { self.vec.as_mut() };
         let len = self.end + self.tail;
@@ -3212,14 +3235,14 @@ pub struct ExtractIf<'a, T, F> {
     pred: F,
 }
 
-#[flux_rs::trusted_impl(reason = "CENTRIFUGE: flux ICE projections.rs:401 impossible case (higher-ranked `FnMut` bound; flux-rs/flux#1715)")]
+#[flux_rs::trusted_impl(reason = "ICE: projections.rs:401 impossible case (higher-ranked `FnMut` bound; flux-rs/flux#1715)")]
 impl<T, F> Iterator for ExtractIf<'_, T, F>
 where
     F: FnMut(&mut T) -> bool,
 {
     type Item = T;
 
-    #[flux_rs::trusted(reason = "CENTRIFUGE: flux ICE projections.rs:401 impossible case (higher-ranked `FnMut` bound; flux-rs/flux#1715)")]
+    #[flux_rs::trusted(reason = "ICE: projections.rs:401 impossible case (higher-ranked `FnMut` bound; flux-rs/flux#1715)")]
     fn next(&mut self) -> Option<T> {
         unsafe {
             let v = self.vec.data_raw();
@@ -3250,6 +3273,7 @@ where
 }
 
 impl<A, F> Drop for ExtractIf<'_, A, F> {
+    #[flux_rs::trusted(reason = "ABORT: pointer bounds of ptr.add(idx) / src.sub(del) need the allocation size (ABORT.md §1)")]
     fn drop(&mut self) {
         unsafe {
             if self.idx < self.old_len && self.del > 0 {
