@@ -78,9 +78,11 @@ panic for these ranges. In release, thin-vec wraps instead:
 | `drain((Excluded(usize::MAX), Unbounded))` | panics | drains **all** elements `[1, 2, 3]` |
 | `drain(..=usize::MAX)` | panics | drains **nothing** |
 
-Debug builds panic with `attempt to add with overflow`. Fix: `n.checked_add(1)`
-with the same panics as `extract_if` (`slice_start_index_overflow_fail` /
-`slice_end_index_overflow_fail`). Tests:
+Debug builds panic with `attempt to add with overflow`. Fix: compute the range
+the way `extract_if` already does. Hoist its local `slice_range` /
+`slice_index_fail` (a backport of core's range handling) to module scope and
+use `slice_range(range, ..len)` in `drain`. That rejects these bounds before
+adding 1, with the same messages as `Vec`. Tests:
 `drain_excluded_usize_max_start_drains_everything`,
 `drain_inclusive_usize_max_end_drains_nothing` (they fail under
 `cargo test --release`).
