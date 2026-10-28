@@ -6,7 +6,7 @@ Target: thin-vec 0.2.21, upstream `mozilla/thin-vec` main `326a226`
 Checked against upstream issues and RustSec on 2026-10-18. The one thin-vec
 advisory, RUSTSEC-2026-0103 (`IntoIter::drop` / `clear` panic double free, fixed
 in 0.2.16), is unrelated, and no issue covers either bug. Both are **novel**.
-**Not reported upstream yet.**
+**Not reported upstream yet** (re-checked 2026-10-28). Ready-to-paste drafts: `TO_FILE.md`.
 
 ## Bug 1: `ThinVec::<ZST>::insert` dereferences the fake length pointer (UB from safe code)
 

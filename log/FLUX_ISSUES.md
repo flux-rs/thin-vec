@@ -4,17 +4,18 @@ Driver: local `kris-gaudel/auto-strong-callgraph`, rebased onto upstream
 `main` `2cacd2ea` (no newer upstream commits on 2026-10-18), flux libs
 `2cacd2ea`, `nightly-2026-10-11`. The same driver ringbuf was Fluxed with;
 `crates/ringbuf/log/FLUX_ISSUES.md` (branch `kris-gaudel/ringbuf`) has the
-shared background. Upstream issues checked 2026-10-18.
+shared background. Upstream issues checked 2026-10-18, re-checked 2026-10-28. Ready-to-paste drafts of the
+novel ones are in `TO_FILE.md`.
 
 | # | kind | message / symptom | upstream | status |
 |---|---|---|---|---|
-| A | **ICE** (panic) | `builtin_assoc_refts.rs:135:76` `TooGeneric([T/#0; N/#1])` | **existing**: [#1800](https://github.com/flux-rs/flux/issues/1800) (fix PR #1801 open) | 1 fn `trusted` |
+| A | **ICE** (panic) | `builtin_assoc_refts.rs:135:76` `TooGeneric([T/#0; N/#1])` | **existing**: [#1800](https://github.com/flux-rs/flux/issues/1800) (fix PR #1801 open); likely fixed by #1874 (merged 2026-10-19, after this driver), unconfirmed | 1 fn `trusted` |
 | B | **ICE** (internal error) | `infer.rs:937:22` ``incompatible types: `self: &'_ strg X[a0]` - `&'_ mut X` `` | **existing**: [#1821](https://github.com/flux-rs/flux/issues/1821) | 3 fns `trusted` + `trusted_impl` |
 | C | **ICE** (panic) | `projections.rs:401:13: impossible case reached` (`assemble_candidates_from_impls`, trait predicate has escaping bound vars) | **existing**: [#1715](https://github.com/flux-rs/flux/issues/1715) (open); #1666 is the same site | 1 fn `trusted` + `trusted_impl` |
 | 1 | incompleteness | no `T::size_of() >= 0` for generic `T` | **novel**, first found in ringbuf (ringbuf FLUX_ISSUES #1) | worked around in 5 fns; root of several ABORTs |
 | 2 | name resolution | a **glob** import placed before the module it imports from doesn't resolve in flux annotations: `use m::*; mod m { pub type Sz = usize; }` → `#[field(Sz[n])]`: `cannot find type Sz in this scope` | **novel** | qualified path used (`impl_details::SizeType`) |
-| 3 | incompleteness | a raw pointer's `addr` isn't known to be `>= 0`, so `ptr as usize - 1` on a `NonNull` (invariant `addr != 0`) can "underflow"; `ptr as usize` is typed `usize[addr]` without the usize range | **novel** | 1 ABORT (`ThinVec::len`, ZST branch) |
-| 4 | missing flux-core specs | `core::slice::from_raw_parts{,_mut}` have no spec: their safety precondition is never checked and the slice length is unknown. Also no specs for the global `alloc::alloc::{alloc, realloc, dealloc}` | **novel**: not on the tracking list in [#1546](https://github.com/flux-rs/flux/issues/1546) | `from_raw_parts{,_mut}` specced locally (`src/flux_specs.rs`); `alloc` not (1 ABORT) |
+| 3 | incompleteness | a raw pointer's `addr` isn't known to be `>= 0`, so `ptr as usize - 1` on a `NonNull` (invariant `addr != 0`) can "underflow"; `ptr as usize` is typed `usize[addr]` without the usize range | **novel** on 2026-10-18; **fixed upstream by #1880** (merged 2026-10-21), unconfirmed on our driver: don't file | 1 ABORT (`ThinVec::len`, ZST branch) |
+| 4 | missing flux-core specs | `core::slice::from_raw_parts{,_mut}` have no spec: their safety precondition is never checked and the slice length is unknown. Also no specs for the global `alloc::alloc::{alloc, realloc, dealloc}` | **novel**: not on the tracking list in [#1546](https://github.com/flux-rs/flux/issues/1546); #1761 is unrelated (the `slice as *const [T]` ICE); still missing on `main` 2026-10-28 | `from_raw_parts{,_mut}` specced locally (`src/flux_specs.rs`); `alloc` not (1 ABORT) |
 
 ## A. `TooGeneric` (existing: #1800)
 
