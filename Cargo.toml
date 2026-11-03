@@ -37,4 +37,3 @@ unexpected_cfgs = { level = "warn", check-cfg = ['cfg(no_global_oom_handling)', 
 # CENTRIFUGE
 [package.metadata.flux]
 enabled = true
-cache = true
